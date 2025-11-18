@@ -5,9 +5,8 @@ extends CharacterBody2D
 @onready var anim: PlayerAnimation = $Anim
 
 func _physics_process(delta: float) -> void:
-	var dir: Vector2 = input.get_direction()
-	var jump: bool = input.is_jump_pressed()
+	var dir := input.get_direction()
 
-	movement.process_movement(self, dir, jump, delta)
+	movement.process_movement(self, dir, input, anim, delta)
 
-	anim.update_animation(dir, velocity, self, jump, delta)
+	anim.update_animation(dir, velocity, self, input.is_jump_pressed(), delta)

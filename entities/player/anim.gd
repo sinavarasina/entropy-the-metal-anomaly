@@ -3,31 +3,36 @@ class_name PlayerAnimation
 
 @onready var sprite: AnimatedSprite2D = get_parent().get_node("AnimatedSprite2D")
 
-# ============================
-# CONFIGURABLE THRESHOLDS
-# ============================
-@export var fall_threshold: float = 4000.0      # Vel.y > 2000 ⇒ FALL
-@export var jump_threshold: float = -10.0       # Vel.y < -10 ⇒ JUMP
-@export var run_threshold: float = 0.1          # abs(dir.x) > 0.1 ⇒ RUN
-@export var double_jump_allow_time: float = 0.5 # Durasi max double jump
-												# setelah first jump
+@export var fall_threshold: float = 2000.0
+@export var jump_threshold: float = -10.0
+@export var run_threshold: float = 0.1
 
-# ============================
-# STATE MACHINE DEFINITIONS
-# ============================
-enum State { IDLE, RUN, JUMP, DOUBLE_JUMP, FALL, LAND }
+@export var double_jump_allow_time: float = 0.5
+@export var double_jump_force: float = -350.0   
+
+@export var gliding_enabled: bool = true
+
+@export var landing_impact_threshold: float = 2500.0
+
+@export var input_roll: String = "player_roll"
+@export var input_glide: String = "player_glide"
+@export var input_leap: String = "player_leap"
+
+enum State {
+	IDLE, RUN, JUMP, DOUBLE_JUMP,
+	FALL, LAND, LAND_IMPACT,
+	ROLL, GLIDE, LEAP
+}
+
 var state: State = State.IDLE
 
-var was_on_ground: bool = false
-var has_jumped: bool = false
-var has_double_jumped: bool = false
+var was_on_ground := false
+var has_jumped := false
+var has_double_jumped := false
+var air_time := 0.0
+var time_since_jump := 0.0
+var last_fall_speed := 0.0
 
-var air_time: float = 0.0    # berapa lama di udara
-var time_since_jump: float = 0.0  # untuk double jump timing
-
-# ============================
-# MAIN UPDATE
-# ============================
 func update_animation(
 	dir: Vector2,
 	vel: Vector2,
@@ -38,67 +43,72 @@ func update_animation(
 
 	var on_ground := body.is_on_floor()
 
-	# Flip kiri/kanan
 	if dir.x < 0:
 		sprite.flip_h = true
 	elif dir.x > 0:
 		sprite.flip_h = false
 
-	# ============================
-	# LANDING (ketika baru menyentuh tanah)
-	# ============================
+	if vel.y > 0:
+		last_fall_speed = vel.y
+
 	if on_ground and not was_on_ground:
-		# Reset flags
+		var impact := last_fall_speed > landing_impact_threshold
+
 		has_jumped = false
 		has_double_jumped = false
 		air_time = 0.0
 		time_since_jump = 0.0
+		last_fall_speed = 0.0
 
-		_set_state(State.LAND, "Landing")
+		if impact:
+			_set_state(State.LAND_IMPACT, "LandingWithImpact")
+		else:
+			_set_state(State.LAND, "Landing")
+
 		was_on_ground = true
 		return
 
 	was_on_ground = on_ground
 
-	# ============================
-	# GROUNDED LOGIC
-	# ============================
 	if on_ground:
+
+		if Input.is_action_just_pressed(input_roll):
+			_set_state(State.ROLL, "Roll")
+			return
+
+		if Input.is_action_just_pressed(input_leap):
+			_set_state(State.LEAP, "Leap")
+			return
+
 		if abs(dir.x) > run_threshold:
 			_set_state(State.RUN, "Running")
 		else:
 			_set_state(State.IDLE, "Idle")
 		return
 
-	# ============================
-	# AIR LOGIC
-	# ============================
 	air_time += delta
 	if has_jumped:
 		time_since_jump += delta
 
-	# -------- FIRST JUMP (JUMPING) --------
+	if gliding_enabled and Input.is_action_pressed(input_glide):
+		_set_state(State.GLIDE, "GlidingJump")
+		return
+
 	if vel.y < jump_threshold and not has_jumped:
 		has_jumped = true
 		time_since_jump = 0.0
 		_set_state(State.JUMP, "Jumping")
 		return
 
-	# -------- DOUBLE JUMP --------
 	if jump_pressed and has_jumped and not has_double_jumped:
-		# Flexible timing: bisa kapan saja selama time_since_jump < max
 		if time_since_jump <= double_jump_allow_time:
 			has_double_jumped = true
 			_set_state(State.DOUBLE_JUMP, "DoubleJump")
 			return
 
-	# -------- FALLING --------
-	# Hanya aktif saat JATUH CEPAT (vel.y > fall_threshold)
 	if vel.y > fall_threshold:
 		_set_state(State.FALL, "Falling")
 		return
-
-	# Jika tidak masuk kondisi di atas, biarkan animasi sebelumnya tetap
 
 func _set_state(new_state: State, anim_name: String) -> void:
 	if state == new_state:
