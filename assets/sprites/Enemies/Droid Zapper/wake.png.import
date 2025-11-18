@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csawwft6835r"
-path="res://.godot/imported/Swimming_Dive.png-8dcdd72e9f6cf818a45a25cafe3b8a45.ctex"
+uid="uid://cudsy30dto65h"
+path="res://.godot/imported/wake.png-d6c121b1dd0282c68342935fb311efac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Player/Swimming_Dive.png"
-dest_files=["res://.godot/imported/Swimming_Dive.png-8dcdd72e9f6cf818a45a25cafe3b8a45.ctex"]
+source_file="res://assets/sprites/Enemies/Droid Zapper/wake.png"
+dest_files=["res://.godot/imported/wake.png-d6c121b1dd0282c68342935fb311efac.ctex"]
 
 [params]
 

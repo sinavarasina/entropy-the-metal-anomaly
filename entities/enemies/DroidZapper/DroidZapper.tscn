@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://dfnigy5vwrfp6"]
+
+[ext_resource type="Texture2D" uid="uid://cudsy30dto65h" path="res://assets/sprites/Enemies/Droid Zapper/wake.png" id="1_0awyv"]
+[ext_resource type="Script" uid="uid://cbjyfcvqlappe" path="res://entities/enemies/DroidZapper/anim.gd" id="2_bdv2m"]
+[ext_resource type="Script" uid="uid://clbryy0idqymh" path="res://entities/enemies/DroidZapper/stats.gd" id="3_bdv2m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdv2m"]
+atlas = ExtResource("1_0awyv")
+region = Rect2(0, 0, 29, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0riub"]
+atlas = ExtResource("1_0awyv")
+region = Rect2(0, 41, 29, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sw1x1"]
+atlas = ExtResource("1_0awyv")
+region = Rect2(0, 82, 29, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buao6"]
+atlas = ExtResource("1_0awyv")
+region = Rect2(0, 123, 29, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qbl1"]
+atlas = ExtResource("1_0awyv")
+region = Rect2(0, 164, 29, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knwep"]
+atlas = ExtResource("1_0awyv")
+region = Rect2(0, 205, 29, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1khy2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdv2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0riub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sw1x1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buao6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qbl1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knwep")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0riub"]
+
+[node name="DroidZapper" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(359, 160)
+sprite_frames = SubResource("SpriteFrames_1khy2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(360, 169)
+shape = SubResource("CapsuleShape2D_0riub")
+
+[node name="Anim" type="Node" parent="."]
+script = ExtResource("2_bdv2m")
+
+[node name="Stats" type="Node" parent="."]
+script = ExtResource("3_bdv2m")
