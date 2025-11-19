@@ -609,7 +609,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Jumping",
-"speed": 24.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -827,7 +827,7 @@ texture_filter = 1
 position = Vector2(278, 147)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_j531f")
-animation = &"Landing"
+animation = &"DoubleJump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(278, 162)
