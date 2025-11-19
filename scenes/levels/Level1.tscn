@@ -1,11 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmubpk75m2jxd"]
 
-[ext_resource type="PackedScene" uid="uid://bet7tmucb5pbb" path="res://entities/player/Player.tscn" id="1_1pwbc"]
 [ext_resource type="PackedScene" uid="uid://cp1h3asd6cidt" path="res://scenes/map/station.tscn" id="1_j08sa"]
+[ext_resource type="PackedScene" uid="uid://dra0cogy3bnme" path="res://entities/player/Cyborg/cyborg.tscn" id="2_j08sa"]
 
 [node name="Level1" type="Node2D"]
 
 [node name="MapStation" parent="." instance=ExtResource("1_j08sa")]
+position = Vector2(7, 4)
 
-[node name="Player" parent="." instance=ExtResource("1_1pwbc")]
-position = Vector2(371, 198)
+[node name="Cyborg" parent="." instance=ExtResource("2_j08sa")]
+position = Vector2(349, 222)
+
+[node name="Camera2D2" type="Camera2D" parent="Cyborg"]
+position = Vector2(44, 2)
+zoom = Vector2(3, 3)
+limit_top = -9999999
+position_smoothing_enabled = true
