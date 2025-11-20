@@ -362,7 +362,7 @@ position = Vector2(0, -6)
 scale = Vector2(1.33236, 1.25)
 sprite_frames = SubResource("SpriteFrames_ut818")
 animation = &"Idle"
-frame_progress = 0.696294
+frame_progress = 0.077252
 
 [node name="Stats" type="Node" parent="."]
 script = ExtResource("9_lelfy")
