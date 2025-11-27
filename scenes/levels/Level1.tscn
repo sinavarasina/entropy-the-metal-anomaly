@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmubpk75m2jxd"]
+[gd_scene load_steps=6 format=3 uid="uid://cmubpk75m2jxd"]
 
 [ext_resource type="PackedScene" uid="uid://cp1h3asd6cidt" path="res://scenes/map/station.tscn" id="1_j08sa"]
 [ext_resource type="PackedScene" uid="uid://dra0cogy3bnme" path="res://entities/player/Cyborg/cyborg.tscn" id="2_j08sa"]
 [ext_resource type="PackedScene" uid="uid://dfnigy5vwrfp6" path="res://entities/enemies/DroidZapper/DroidZapper.tscn" id="2_x4si1"]
 [ext_resource type="PackedScene" uid="uid://bxqgetgbc5cto" path="res://scenes/music/in_lab.tscn" id="3_x4si1"]
+[ext_resource type="PackedScene" uid="uid://dvw2yxt3dne22" path="res://entities/enemies/BarrelKnight/BarrelKnight.tscn" id="5_68ib6"]
 
 [node name="Level1" type="Node2D"]
 
@@ -11,10 +12,13 @@
 position = Vector2(7, 4)
 
 [node name="DroidZapper" parent="." instance=ExtResource("2_x4si1")]
-position = Vector2(603, 239)
+position = Vector2(701, 243)
+
+[node name="DroidZapper" parent="DroidZapper" instance=ExtResource("2_x4si1")]
+position = Vector2(-304, 1)
 
 [node name="Cyborg" parent="." instance=ExtResource("2_j08sa")]
-position = Vector2(349, 222)
+position = Vector2(661, 393)
 
 [node name="Camera2D2" type="Camera2D" parent="Cyborg"]
 position = Vector2(44, 2)
@@ -24,3 +28,15 @@ position_smoothing_enabled = true
 
 [node name="inLab" parent="Cyborg" instance=ExtResource("3_x4si1")]
 position = Vector2(0, -4)
+
+[node name="DroidZapper2" parent="." instance=ExtResource("2_x4si1")]
+position = Vector2(466, 468)
+
+[node name="DroidZapper3" parent="." instance=ExtResource("2_x4si1")]
+position = Vector2(262, 467)
+
+[node name="BarrelKnight" parent="." instance=ExtResource("5_68ib6")]
+position = Vector2(1264, 39)
+
+[node name="BarrelKnight2" parent="." instance=ExtResource("5_68ib6")]
+position = Vector2(1428, 199)

@@ -25,9 +25,9 @@ var combat
 func _ready():
 	col_attack.disabled = true
 
-	detection = load("res://entities/enemies/DroidZapper/ai/detection.gd").new(self, agro_area)
-	movement = load("res://entities/enemies/DroidZapper/ai/movement.gd").new(self)
-	combat    = load("res://entities/enemies/DroidZapper/ai/combat.gd").new(self)
+	detection = load("res://entities/enemies/BarrelKnight/ai/detection.gd").new(self, agro_area)
+	movement = load("res://entities/enemies/BarrelKnight/ai/movement.gd").new(self)
+	combat    = load("res://entities/enemies/BarrelKnight/ai/combat.gd").new(self)
 
 	detection.setup()
 
