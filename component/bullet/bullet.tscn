@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://lbmsol0i5in0"]
+[gd_scene load_steps=4 format=3 uid="uid://lbmsol0i5in0"]
 
-[node name="Bullet" type="Node2D"]
+[ext_resource type="Script" uid="uid://dp4dw6f4wwboo" path="res://component/bullet/bullet.gd" id="1_hkuj7"]
+[ext_resource type="Texture2D" uid="uid://beqryfy73y8p7" path="res://assets/sprites/3 Cyborg/With Laserbeam/bullet/10.png" id="2_5blcr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_soerq"]
+size = Vector2(6, 3)
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_hkuj7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_soerq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 0.5)
+texture = ExtResource("2_5blcr")

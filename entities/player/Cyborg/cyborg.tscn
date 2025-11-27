@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://dra0cogy3bnme"]
+[gd_scene load_steps=88 format=3 uid="uid://dra0cogy3bnme"]
 
 [ext_resource type="Script" uid="uid://cbdvnaof2msm" path="res://entities/player/Cyborg/cyborg.gd" id="1_h6dt7"]
 [ext_resource type="Texture2D" uid="uid://cjauxlrp8ekyl" path="res://assets/sprites/3 Cyborg/No Weapon/Cyborg_idle.png" id="2_5yirn"]
@@ -14,19 +14,26 @@
 [ext_resource type="Texture2D" uid="uid://ckyo3prclo5li" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/idle/idle-2-laserbeam4.png" id="9_aqrml"]
 [ext_resource type="Script" uid="uid://beyx7a4oj3hbw" path="res://entities/player/Cyborg/stats.gd" id="9_lelfy"]
 [ext_resource type="Script" uid="uid://cmajpjrrndhl7" path="res://entities/player/Cyborg/movement.gd" id="10_movement"]
+[ext_resource type="Texture2D" uid="uid://cnxfak4prmulx" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/NewfiringHorLaserbeam1.png" id="11_e68fy"]
 [ext_resource type="Script" uid="uid://c6mmwqymdige5" path="res://entities/player/Cyborg/input.gd" id="11_input"]
 [ext_resource type="Script" uid="uid://bumes62ha2y80" path="res://entities/player/Cyborg/anim.gd" id="12_anim"]
 [ext_resource type="Texture2D" uid="uid://co71meuen16sr" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/jump/Jump2-laserbeam.png" id="12_eidif"]
+[ext_resource type="Texture2D" uid="uid://bn0lspb76gmg5" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/NewfiringHorLaserbeam2.png" id="12_wxb62"]
+[ext_resource type="Texture2D" uid="uid://biouknjcxphs5" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/NewfiringHorLaserbeam3.png" id="13_mh2pd"]
 [ext_resource type="Texture2D" uid="uid://bpo8k14dnuptd" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/run/run-2-laserbeam-sheet.png" id="13_msta3"]
+[ext_resource type="Texture2D" uid="uid://c5l731ronnhas" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/NewfiringHorLaserbeam4.png" id="14_ocbnj"]
+[ext_resource type="Texture2D" uid="uid://cta1of1068y2y" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/NewfiringHorLaserbeam5.png" id="15_2pabm"]
 [ext_resource type="Texture2D" uid="uid://81bwtyrtv88r" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam1.png" id="15_ri8mo"]
 [ext_resource type="Texture2D" uid="uid://bn4ibfv3avge5" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam2.png" id="16_5qolx"]
+[ext_resource type="Texture2D" uid="uid://by0ncioheplsv" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/NewfiringHorLaserbeam6.png" id="16_ahrer"]
 [ext_resource type="Texture2D" uid="uid://c8qw1wmxbqsve" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam3.png" id="17_g0dw2"]
 [ext_resource type="Texture2D" uid="uid://brd6ht7rl4jwp" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam4.png" id="18_x8spx"]
 [ext_resource type="Texture2D" uid="uid://p4fs8mvqtw6e" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam5.png" id="19_wlryj"]
 [ext_resource type="Texture2D" uid="uid://cic7bufegr20t" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam6.png" id="20_u8jbd"]
+[ext_resource type="Script" uid="uid://bjlu3cai223gh" path="res://entities/player/Cyborg/controller.gd" id="25_ri8mo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyaby"]
-size = Vector2(24, 46)
+size = Vector2(30, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eom1p"]
 atlas = ExtResource("2_xyaby")
@@ -91,30 +98,6 @@ region = Rect2(101, 0, 19, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrrt3"]
 atlas = ExtResource("4_eom1p")
 region = Rect2(149, 0, 19, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eq87c"]
-atlas = ExtResource("15_ri8mo")
-region = Rect2(0, 0, 36, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n3x68"]
-atlas = ExtResource("16_5qolx")
-region = Rect2(0, 0, 36, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xnqhg"]
-atlas = ExtResource("17_g0dw2")
-region = Rect2(0, 0, 36, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_03jxv"]
-atlas = ExtResource("18_x8spx")
-region = Rect2(0, 0, 36, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rrype"]
-atlas = ExtResource("19_wlryj")
-region = Rect2(0, 0, 36, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_16n0e"]
-atlas = ExtResource("20_u8jbd")
-region = Rect2(0, 0, 36, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2cn2o"]
 atlas = ExtResource("2_5yirn")
@@ -195,6 +178,30 @@ region = Rect2(96, 0, 40, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_3m4di"]
 atlas = ExtResource("12_eidif")
 region = Rect2(144, 0, 40, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq87c"]
+atlas = ExtResource("15_ri8mo")
+region = Rect2(0, 0, 36, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3x68"]
+atlas = ExtResource("16_5qolx")
+region = Rect2(0, 0, 36, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnqhg"]
+atlas = ExtResource("17_g0dw2")
+region = Rect2(0, 0, 36, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03jxv"]
+atlas = ExtResource("18_x8spx")
+region = Rect2(0, 0, 36, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrype"]
+atlas = ExtResource("19_wlryj")
+region = Rect2(0, 0, 36, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16n0e"]
+atlas = ExtResource("20_u8jbd")
+region = Rect2(0, 0, 36, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xyaby"]
 atlas = ExtResource("6_lelfy")
@@ -310,27 +317,45 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 5.0,
-"texture": SubResource("AtlasTexture_eq87c")
+"duration": 1.0,
+"texture": ExtResource("15_ri8mo")
 }, {
-"duration": 5.0,
-"texture": SubResource("AtlasTexture_n3x68")
+"duration": 1.0,
+"texture": ExtResource("16_5qolx")
 }, {
-"duration": 5.0,
-"texture": SubResource("AtlasTexture_xnqhg")
+"duration": 1.0,
+"texture": ExtResource("17_g0dw2")
 }, {
-"duration": 5.0,
-"texture": SubResource("AtlasTexture_03jxv")
+"duration": 1.0,
+"texture": ExtResource("18_x8spx")
 }, {
-"duration": 5.0,
-"texture": SubResource("AtlasTexture_rrype")
+"duration": 1.0,
+"texture": ExtResource("19_wlryj")
 }, {
-"duration": 5.0,
-"texture": SubResource("AtlasTexture_16n0e")
+"duration": 1.0,
+"texture": ExtResource("20_u8jbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_e68fy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wxb62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mh2pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ocbnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2pabm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ahrer")
 }],
 "loop": true,
 "name": &"FiringHotLaserbeam",
-"speed": 1.0
+"speed": 44.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -419,6 +444,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_eq87c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3x68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnqhg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03jxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrype")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16n0e")
+}],
+"loop": true,
+"name": &"OldFiringHotLaserbeam",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_xyaby")
 }, {
 "duration": 1.0,
@@ -470,19 +518,21 @@ slide_on_ceiling = false
 script = ExtResource("1_h6dt7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 7)
+position = Vector2(0, 6.5)
 shape = SubResource("RectangleShape2D_xyaby")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Pivot" type="Marker2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pivot"]
 texture_filter = 1
-position = Vector2(1, -1)
+position = Vector2(-18, -30)
 scale = Vector2(1.33236, 1.25)
 sprite_frames = SubResource("SpriteFrames_ut818")
 animation = &"FiringHotLaserbeam"
-frame = 4
-frame_progress = 0.7540499999999984
+centered = false
 
-[node name="Marker2D" type="Marker2D" parent="."]
+[node name="Muzzle" type="Marker2D" parent="Pivot"]
+position = Vector2(30, 2)
 
 [node name="Stats" type="Node" parent="."]
 script = ExtResource("9_lelfy")
@@ -495,3 +545,6 @@ script = ExtResource("11_input")
 
 [node name="Anim" type="Node" parent="."]
 script = ExtResource("12_anim")
+
+[node name="Controller" type="Node" parent="."]
+script = ExtResource("25_ri8mo")
