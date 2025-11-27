@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2orkpva7feq6"
+path="res://.godot/imported/Shoot 1.mp3-2adc6a396c8399ed299ba6940821c490.mp3str"
+
+[deps]
+
+source_file="res://assets/SoundEffect/Shoot/Shoot 1.mp3"
+dest_files=["res://.godot/imported/Shoot 1.mp3-2adc6a396c8399ed299ba6940821c490.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

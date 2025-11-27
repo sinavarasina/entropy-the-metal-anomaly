@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://dra0cogy3bnme"]
+[gd_scene load_steps=91 format=3 uid="uid://dra0cogy3bnme"]
 
 [ext_resource type="Script" uid="uid://cbdvnaof2msm" path="res://entities/player/Cyborg/cyborg.gd" id="1_h6dt7"]
 [ext_resource type="Texture2D" uid="uid://cjauxlrp8ekyl" path="res://assets/sprites/3 Cyborg/No Weapon/Cyborg_idle.png" id="2_5yirn"]
@@ -31,6 +31,9 @@
 [ext_resource type="Texture2D" uid="uid://p4fs8mvqtw6e" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam5.png" id="19_wlryj"]
 [ext_resource type="Texture2D" uid="uid://cic7bufegr20t" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam6.png" id="20_u8jbd"]
 [ext_resource type="Script" uid="uid://bjlu3cai223gh" path="res://entities/player/Cyborg/controller.gd" id="25_ri8mo"]
+[ext_resource type="AudioStream" uid="uid://dydrq7dh1jo6t" path="res://assets/SoundEffect/step_metal.ogg" id="32_mh2pd"]
+[ext_resource type="AudioStream" uid="uid://cgccawevnahly" path="res://assets/SoundEffect/Shoot/Shoot 8.mp3" id="32_wxb62"]
+[ext_resource type="AudioStream" uid="uid://6w01qrrs80dc" path="res://assets/SoundEffect/Jumping/Jump.wav" id="34_ocbnj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyaby"]
 size = Vector2(30, 49)
@@ -548,3 +551,14 @@ script = ExtResource("12_anim")
 
 [node name="Controller" type="Node" parent="."]
 script = ExtResource("25_ri8mo")
+
+[node name="step" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("32_mh2pd")
+
+[node name="shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("32_wxb62")
+volume_db = -10.0
+
+[node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("34_ocbnj")
+volume_db = -16.0

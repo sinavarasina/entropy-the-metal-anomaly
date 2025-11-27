@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckvl17thhx8li"
+path="res://.godot/imported/Jumping 3.mp3-f1ed0e7509875d09f1626064548a17c5.mp3str"
+
+[deps]
+
+source_file="res://assets/SoundEffect/Jumping/Jumping 3.mp3"
+dest_files=["res://.godot/imported/Jumping 3.mp3-f1ed0e7509875d09f1626064548a17c5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

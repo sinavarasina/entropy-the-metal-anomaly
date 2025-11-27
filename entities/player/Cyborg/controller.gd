@@ -1,6 +1,5 @@
 extends Node
 class_name CyborgController
-
 enum State { IDLE, RUN, AIR, ATTACK }
 var state: State = State.IDLE
 
@@ -38,6 +37,13 @@ func _state_idle(delta: float):
 func _state_run(delta: float):
 	cyborg.movement.apply_gravity(delta)
 	cyborg.movement.move_horizontal(cyborg.input.get_direction().x, delta)
+	if cyborg.is_on_floor() and cyborg.input.get_direction().x !=0:
+		if not cyborg.step.playing:
+			cyborg.step.play()
+	else :
+		if cyborg.step.playing:
+			cyborg.step.stop()
+			
 	cyborg.move_and_slide()
 
 	if cyborg.input.is_jump_pressed():
@@ -85,13 +91,18 @@ func fire_bullet():
 
 
 func change_state(new_state: State):
+	if state == State.RUN and new_state != State.RUN:
+		if cyborg.step.playing:
+			cyborg.step.stop()
 	state = new_state
 	
 	match state:
 		State.IDLE: cyborg.anim.play_idle()
 		State.RUN: cyborg.anim.play_run()
 		State.ATTACK: 
+			cyborg.shoot.play()
 			cyborg.anim.play_attack()
+			
 			fire_bullet()
 		State.AIR: 
 			pass 
@@ -99,8 +110,10 @@ func change_state(new_state: State):
 func _perform_jump():
 	cyborg.movement.jump(cyborg.stats.jump_force)
 	cyborg.anim.play_jump()
+	cyborg.jump.play()
 
 func _perform_double_jump():
 	cyborg.movement.jump(cyborg.stats.double_jump_force)
 	cyborg.anim.play_double_jump()
 	can_double_jump = false
+	cyborg.jump.play()

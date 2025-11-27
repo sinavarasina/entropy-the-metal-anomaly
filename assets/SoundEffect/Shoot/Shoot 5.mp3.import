@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxfwgidpscqxq"
+path="res://.godot/imported/Shoot 5.mp3-d43037edb2e762b7541f878251729a85.mp3str"
+
+[deps]
+
+source_file="res://assets/SoundEffect/Shoot/Shoot 5.mp3"
+dest_files=["res://.godot/imported/Shoot 5.mp3-d43037edb2e762b7541f878251729a85.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -6,9 +6,11 @@ class_name Cyborg
 @onready var anim: CyborgAnimation = $Anim
 @onready var stats: CyborgStats = $Stats
 @onready var controller: CyborgController = $Controller
-
+@onready var shoot: AudioStreamPlayer = $shoot
 @export var bullet_scene: PackedScene = preload("res://component/bullet/bullet.tscn")
 @onready var muzzle: Marker2D = $Pivot/Muzzle
+@onready var step: AudioStreamPlayer = $step
+@onready var jump: AudioStreamPlayer = $jump
 
 func _ready() -> void:
 	controller.setup(self)

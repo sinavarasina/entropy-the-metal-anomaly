@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgccawevnahly"
+path="res://.godot/imported/Shoot 8.mp3-8022ae3faeaa2f5943793fadfd6807dd.mp3str"
+
+[deps]
+
+source_file="res://assets/SoundEffect/Shoot/Shoot 8.mp3"
+dest_files=["res://.godot/imported/Shoot 8.mp3-8022ae3faeaa2f5943793fadfd6807dd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
