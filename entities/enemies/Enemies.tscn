@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl6syt0cxlf31"]
+
+[sub_resource type="GDScript" id="GDScript_01itn"]
+script/source = "extends Node
+class_name EnemySpawner
+
+@export var droid_zapper_scene: PackedScene = preload(\"res://entities/enemies/DroidZapper/DroidZapper.tscn\")
+
+@export var spawn_interval: float = 3.0
+@export var max_enemies: int = 10
+
+var timer: float = 0.0
+
+@onready var enemies_root: Node = get_parent()
+@onready var entropy_system: EntropySystem = get_node(\"/root/entropy_system\")
+
+func _process(delta: float) -> void:
+	timer -= delta
+	if timer <= 0.0:
+		timer = spawn_interval
+		_try_spawn()
+
+
+func _try_spawn() -> void:
+	if enemies_root.get_child_count() >= max_enemies:
+		return
+
+	_spawn_droid_zapper()
+
+
+func _spawn_droid_zapper() -> void:
+	var enemy := droid_zapper_scene.instantiate()
+
+	var x := randf_range(200, 800)
+	var y := randf_range(50, 150)
+	enemy.position = Vector2(x, y)
+
+	enemies_root.add_child(enemy)
+"
+
+[node name="Enemies" type="Node"]
+
+[node name="EnemySpawner" type="Node" parent="."]
+script = SubResource("GDScript_01itn")

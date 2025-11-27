@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0slicp67ke42"
-path="res://.godot/imported/run-2-laserbeam.png-1473f95d6257848cc392d6f8672bad00.ctex"
+uid="uid://brd6ht7rl4jwp"
+path="res://.godot/imported/firingHorLaserbeam4.png-00a69721834bebcd90614c83fdadc84c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/3 Cyborg/With Laserbeam/run-2-laserbeam.png"
-dest_files=["res://.godot/imported/run-2-laserbeam.png-1473f95d6257848cc392d6f8672bad00.ctex"]
+source_file="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam4.png"
+dest_files=["res://.godot/imported/firingHorLaserbeam4.png-00a69721834bebcd90614c83fdadc84c.ctex"]
 
 [params]
 

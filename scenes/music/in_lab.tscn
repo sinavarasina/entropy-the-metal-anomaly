@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bxqgetgbc5cto"]
 
-[ext_resource type="AudioStream" uid="uid://e3kdqviycj32" path="res://assets/BGM/song21.mp3" id="1_n3s0i"]
+[ext_resource type="AudioStream" uid="uid://bhlwf6rd0cfo1" path="res://assets/BGM/song21.mp3" id="1_n3s0i"]
 
 [node name="inLab" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_n3s0i")

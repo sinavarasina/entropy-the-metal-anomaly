@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpxu2itsfk40y"
-path="res://.godot/imported/idle-2-laserbeam.png-5a52238bb89fe88591c17aa8648aefa3.ctex"
+uid="uid://cic7bufegr20t"
+path="res://.godot/imported/firingHorLaserbeam6.png-67be35726e9bcd272c1c039d2dea5845.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/3 Cyborg/With Laserbeam/idle-2-laserbeam.png"
-dest_files=["res://.godot/imported/idle-2-laserbeam.png-5a52238bb89fe88591c17aa8648aefa3.ctex"]
+source_file="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam6.png"
+dest_files=["res://.godot/imported/firingHorLaserbeam6.png-67be35726e9bcd272c1c039d2dea5845.ctex"]
 
 [params]
 

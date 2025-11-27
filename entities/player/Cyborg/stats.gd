@@ -1,6 +1,9 @@
 extends Node
 class_name CyborgStats
 
+# ===== Combat Stats =====
+@export var attack_damage: float = 10.0
+
 # ===== Movement Stats =====
 @export var move_speed: float = 250.0
 @export var gravity: float = 900.0

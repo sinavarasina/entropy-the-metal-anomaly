@@ -1,12 +1,21 @@
 extends CharacterBody2D
+class_name Cyborg
 
-@onready var movement: CyborgMovement = $Movement
 @onready var input: CyborgInput = $Input
+@onready var movement: CyborgMovement = $Movement
 @onready var anim: CyborgAnimation = $Anim
+@onready var stats: CyborgStats = $Stats
+@onready var controller: CyborgController = $Controller
+
+@export var bullet_scene: PackedScene = preload("res://component/bullet/bullet.tscn")
+@onready var muzzle: Marker2D = $Pivot/Muzzle
+
+func _ready() -> void:
+	controller.setup(self)
+	
+	var sprite_frames = anim.sprite.sprite_frames
+	if sprite_frames.has_animation("FiringHotLaserbeam"):
+		sprite_frames.set_animation_loop("FiringHotLaserbeam", false)
 
 func _physics_process(delta: float) -> void:
-	var dir := input.get_direction()
-
-	movement.process_movement(self, dir, input, anim, delta)
-
-	anim.update_animation(dir, velocity, self, input.is_jump_pressed(), delta)
+	controller.update(delta)
