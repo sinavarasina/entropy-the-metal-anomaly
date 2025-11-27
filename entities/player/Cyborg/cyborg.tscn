@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=3 uid="uid://dra0cogy3bnme"]
+[gd_scene load_steps=81 format=3 uid="uid://dra0cogy3bnme"]
 
 [ext_resource type="Script" uid="uid://cbdvnaof2msm" path="res://entities/player/Cyborg/cyborg.gd" id="1_h6dt7"]
 [ext_resource type="Texture2D" uid="uid://cjauxlrp8ekyl" path="res://assets/sprites/3 Cyborg/No Weapon/Cyborg_idle.png" id="2_5yirn"]
@@ -24,10 +24,9 @@
 [ext_resource type="Texture2D" uid="uid://brd6ht7rl4jwp" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam4.png" id="18_x8spx"]
 [ext_resource type="Texture2D" uid="uid://p4fs8mvqtw6e" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam5.png" id="19_wlryj"]
 [ext_resource type="Texture2D" uid="uid://cic7bufegr20t" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam6.png" id="20_u8jbd"]
-[ext_resource type="Texture2D" uid="uid://bytbjjqjyfem8" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/shootEf.png" id="25_e68fy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyaby"]
-size = Vector2(20, 40)
+size = Vector2(24, 46)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eom1p"]
 atlas = ExtResource("2_xyaby")
@@ -92,6 +91,30 @@ region = Rect2(101, 0, 19, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrrt3"]
 atlas = ExtResource("4_eom1p")
 region = Rect2(149, 0, 19, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq87c"]
+atlas = ExtResource("15_ri8mo")
+region = Rect2(0, 0, 36, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3x68"]
+atlas = ExtResource("16_5qolx")
+region = Rect2(0, 0, 36, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnqhg"]
+atlas = ExtResource("17_g0dw2")
+region = Rect2(0, 0, 36, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03jxv"]
+atlas = ExtResource("18_x8spx")
+region = Rect2(0, 0, 36, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrype"]
+atlas = ExtResource("19_wlryj")
+region = Rect2(0, 0, 36, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16n0e"]
+atlas = ExtResource("20_u8jbd")
+region = Rect2(0, 0, 36, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2cn2o"]
 atlas = ExtResource("2_5yirn")
@@ -221,30 +244,6 @@ region = Rect2(193, 0, 42, 48)
 atlas = ExtResource("13_msta3")
 region = Rect2(241, 0, 42, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eq87c"]
-atlas = ExtResource("15_ri8mo")
-region = Rect2(0, 0, 36, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n3x68"]
-atlas = ExtResource("16_5qolx")
-region = Rect2(0, 0, 36, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xnqhg"]
-atlas = ExtResource("17_g0dw2")
-region = Rect2(0, 0, 36, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_03jxv"]
-atlas = ExtResource("18_x8spx")
-region = Rect2(0, 0, 36, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rrype"]
-atlas = ExtResource("19_wlryj")
-region = Rect2(0, 0, 36, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_16n0e"]
-atlas = ExtResource("20_u8jbd")
-region = Rect2(0, 0, 36, 48)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_ut818"]
 animations = [{
 "frames": [{
@@ -309,6 +308,29 @@ animations = [{
 "loop": true,
 "name": &"Fall",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_eq87c")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_n3x68")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_xnqhg")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_03jxv")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_rrype")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_16n0e")
+}],
+"loop": true,
+"name": &"FiringHotLaserbeam",
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -440,79 +462,6 @@ animations = [{
 "loop": true,
 "name": &"Run2Laserbeam",
 "speed": 9.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eq87c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n3x68")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xnqhg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_03jxv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rrype")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_16n0e")
-}],
-"loop": true,
-"name": &"firingHorLaserbeam",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_74q75"]
-atlas = ExtResource("25_e68fy")
-region = Rect2(0, 0, 28, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e3mrk"]
-atlas = ExtResource("25_e68fy")
-region = Rect2(48, 0, 28, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5dtw5"]
-atlas = ExtResource("25_e68fy")
-region = Rect2(98, 0, 28, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vyl8x"]
-atlas = ExtResource("25_e68fy")
-region = Rect2(150, 0, 28, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jjx3r"]
-atlas = ExtResource("25_e68fy")
-region = Rect2(204, 0, 28, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aic6k"]
-atlas = ExtResource("25_e68fy")
-region = Rect2(257, 0, 28, 48)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_xrcl0"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_74q75")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e3mrk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5dtw5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vyl8x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jjx3r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_aic6k")
-}],
-"loop": true,
-"name": &"Ef1",
-"speed": 5.0
 }]
 
 [node name="Cyborg" type="CharacterBody2D" groups=["player"]]
@@ -521,16 +470,19 @@ slide_on_ceiling = false
 script = ExtResource("1_h6dt7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 4)
+position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_xyaby")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1, -6)
+position = Vector2(1, -1)
 scale = Vector2(1.33236, 1.25)
 sprite_frames = SubResource("SpriteFrames_ut818")
-animation = &"firingHorLaserbeam"
-frame_progress = 0.109882
+animation = &"FiringHotLaserbeam"
+frame = 4
+frame_progress = 0.7540499999999984
+
+[node name="Marker2D" type="Marker2D" parent="."]
 
 [node name="Stats" type="Node" parent="."]
 script = ExtResource("9_lelfy")
@@ -543,12 +495,3 @@ script = ExtResource("11_input")
 
 [node name="Anim" type="Node" parent="."]
 script = ExtResource("12_anim")
-
-[node name="FireEf" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(44, -4)
-scale = Vector2(1.33236, 1.25)
-sprite_frames = SubResource("SpriteFrames_xrcl0")
-animation = &"Ef1"
-frame = 5
-frame_progress = 0.316352

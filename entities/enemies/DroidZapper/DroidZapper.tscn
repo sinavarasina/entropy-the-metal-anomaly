@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dfnigy5vwrfp6"]
+[gd_scene load_steps=43 format=3 uid="uid://dfnigy5vwrfp6"]
 
 [ext_resource type="Texture2D" uid="uid://cudsy30dto65h" path="res://assets/sprites/Enemies/Droid Zapper/wake.png" id="1_0awyv"]
 [ext_resource type="Texture2D" uid="uid://c1f0pj7fg44oo" path="res://assets/sprites/Enemies/Droid Zapper/attack.png" id="1_buao6"]
@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://cbjyfcvqlappe" path="res://entities/enemies/DroidZapper/anim.gd" id="2_bdv2m"]
 [ext_resource type="Script" uid="uid://clbryy0idqymh" path="res://entities/enemies/DroidZapper/stats.gd" id="3_bdv2m"]
 [ext_resource type="Texture2D" uid="uid://cdybll03a65u2" path="res://assets/sprites/Enemies/Droid Zapper/run.png" id="3_knwep"]
-[ext_resource type="Script" uid="uid://dmh8g0u3uo7my" path="res://entities/enemies/DroidZapper/ai.gd" id="7_8qbl1"]
+[ext_resource type="Script" uid="uid://dmh8g0u3uo7my" path="res://entities/enemies/DroidZapper/ai/ai.gd" id="7_8qbl1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1khy2"]
 atlas = ExtResource("1_buao6")
@@ -51,83 +51,83 @@ region = Rect2(0, 369, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_616lm"]
 atlas = ExtResource("2_8qbl1")
-region = Rect2(0, 0, 39, 41)
+region = Rect2(0, 0, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ifdbu"]
 atlas = ExtResource("2_8qbl1")
-region = Rect2(0, 41, 39, 41)
+region = Rect2(0, 41, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_juptk"]
 atlas = ExtResource("2_8qbl1")
-region = Rect2(0, 82, 39, 41)
+region = Rect2(0, 82, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qqwrp"]
 atlas = ExtResource("2_8qbl1")
-region = Rect2(0, 123, 39, 41)
+region = Rect2(0, 123, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_64l1b"]
 atlas = ExtResource("2_8qbl1")
-region = Rect2(0, 164, 39, 41)
+region = Rect2(0, 164, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_86npe"]
 atlas = ExtResource("2_8qbl1")
-region = Rect2(0, 205, 39, 41)
+region = Rect2(0, 205, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ftx5"]
 atlas = ExtResource("2_8qbl1")
-region = Rect2(0, 246, 39, 41)
+region = Rect2(0, 246, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4oax0"]
 atlas = ExtResource("2_8qbl1")
-region = Rect2(0, 287, 39, 41)
+region = Rect2(0, 287, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eo3qd"]
 atlas = ExtResource("3_knwep")
-region = Rect2(0, 0, 29, 41)
+region = Rect2(0, 0, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vcocm"]
 atlas = ExtResource("3_knwep")
-region = Rect2(0, 41, 29, 41)
+region = Rect2(0, 41, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5g5sl"]
 atlas = ExtResource("3_knwep")
-region = Rect2(0, 82, 29, 41)
+region = Rect2(0, 82, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ynplj"]
 atlas = ExtResource("3_knwep")
-region = Rect2(0, 123, 29, 41)
+region = Rect2(0, 123, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7s5x8"]
 atlas = ExtResource("3_knwep")
-region = Rect2(0, 164, 29, 41)
+region = Rect2(0, 164, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mlfdj"]
 atlas = ExtResource("3_knwep")
-region = Rect2(0, 205, 29, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bdv2m"]
-atlas = ExtResource("1_0awyv")
-region = Rect2(0, 0, 29, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0riub"]
-atlas = ExtResource("1_0awyv")
-region = Rect2(0, 41, 29, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sw1x1"]
-atlas = ExtResource("1_0awyv")
-region = Rect2(0, 82, 29, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_buao6"]
-atlas = ExtResource("1_0awyv")
-region = Rect2(0, 123, 29, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8qbl1"]
-atlas = ExtResource("1_0awyv")
-region = Rect2(0, 164, 29, 41)
+region = Rect2(0, 205, 58, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_knwep"]
 atlas = ExtResource("1_0awyv")
-region = Rect2(0, 205, 29, 41)
+region = Rect2(0, 0, 58, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ewum"]
+atlas = ExtResource("1_0awyv")
+region = Rect2(0, 41, 58, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jpsd"]
+atlas = ExtResource("1_0awyv")
+region = Rect2(0, 82, 58, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ja2dp"]
+atlas = ExtResource("1_0awyv")
+region = Rect2(0, 123, 58, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvm7v"]
+atlas = ExtResource("1_0awyv")
+region = Rect2(0, 164, 58, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2knd"]
+atlas = ExtResource("1_0awyv")
+region = Rect2(0, 205, 58, 41)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1khy2"]
 animations = [{
@@ -220,50 +220,61 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bdv2m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0riub")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sw1x1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_buao6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8qbl1")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_knwep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ewum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jpsd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ja2dp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvm7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2knd")
 }],
 "loop": true,
 "name": &"Wake",
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0riub"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_knwep"]
+size = Vector2(621, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_buao6"]
 size = Vector2(38, 19)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0riub"]
+
 [node name="DroidZapper" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_knwep")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(13, -4)
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Marker2D"]
+position = Vector2(13, -5)
 sprite_frames = SubResource("SpriteFrames_1khy2")
 animation = &"Attack"
+
+[node name="AgroArea" type="Area2D" parent="Marker2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/AgroArea"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_knwep")
+
+[node name="AttackArea" type="Area2D" parent="Marker2D"]
+
+[node name="CollisionAttack" type="CollisionShape2D" parent="Marker2D/AttackArea"]
+position = Vector2(21, 3)
+shape = SubResource("RectangleShape2D_buao6")
 
 [node name="CollisionStandard" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.5)
 shape = SubResource("CapsuleShape2D_0riub")
-
-[node name="CollisionAttack" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(21, 3)
-shape = SubResource("RectangleShape2D_buao6")
 
 [node name="Anim" type="Node" parent="."]
 script = ExtResource("2_bdv2m")

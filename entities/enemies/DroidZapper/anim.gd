@@ -1,7 +1,7 @@
 extends Node
 class_name DroidZapperAnim
 
-@onready var sprite: AnimatedSprite2D = get_parent().get_node("AnimatedSprite2D")
+@onready var sprite: AnimatedSprite2D = get_parent().get_node("Marker2D/AnimatedSprite2D")
 
 const ANIM_WAKE: String  = "Wake"
 const ANIM_RUN: String   = "Run"
@@ -48,11 +48,11 @@ func play_death() -> void:
 	play(ANIM_DEATH)
 
 
-func set_flip(dir: float) -> void:
-	if dir < 0.0:
-		sprite.flip_h = true
-	elif dir > 0.0:
-		sprite.flip_h = false
+#func set_flip(dir: float) -> void:
+	#if dir < 0.0:
+		#sprite.flip_h = true
+	#elif dir > 0.0:
+		#sprite.flip_h = false
 
 
 func is_finished() -> bool:

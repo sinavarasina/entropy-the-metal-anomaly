@@ -1,4 +1,5 @@
-[gd_scene load_steps=6 format=4 uid="uid://cmubpk75m2jxd"]
+
+[gd_scene load_steps=5 format=3 uid="uid://cmubpk75m2jxd"]
 
 [ext_resource type="PackedScene" uid="uid://cp1h3asd6cidt" path="res://scenes/map/station.tscn" id="1_j08sa"]
 [ext_resource type="PackedScene" uid="uid://dra0cogy3bnme" path="res://entities/player/Cyborg/cyborg.tscn" id="2_j08sa"]

@@ -2,7 +2,7 @@ extends Node
 class_name CyborgAnimation
 
 @onready var sprite: AnimatedSprite2D = get_parent().get_node("AnimatedSprite2D")
-@onready var fireEf: AnimatedSprite2D = get_parent().get_node("FireEf")
+#@onready var fireEf: AnimatedSprite2D = get_parent().get_node("FireEf")
 
 var can_double_jump = false
 
@@ -28,11 +28,7 @@ func update_animation(
 
 	# ====== LOGIKA FIRING ======
 	if fire_pressed:
-		# Saat firing, jalankan animasi Ef1 dari fireEf dan FiringHorLaserbeam dari sprite
-		# Arah firing mengikuti arah direksi player (kanan atau kiri)
-		fireEf.flip_h = sprite.flip_h
-		fireEf.play("Ef1")
-		sprite.play("FiringHorLaserbeam")
+		sprite.play("FiringHotLaserbeam")
 		return
 
 	# ====== LOGIKA ANIMASI ======

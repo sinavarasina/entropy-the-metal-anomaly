@@ -5,6 +5,7 @@ class_name DroidZapperStats
 @export var attack: float = 6.0
 @export var defense: float = 80.0
 @export var speed: float = 60.0
+@export var gravity: float = 900.0
 
 var current_hp: float = 0.0
 
