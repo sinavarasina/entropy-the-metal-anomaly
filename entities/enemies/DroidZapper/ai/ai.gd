@@ -16,8 +16,11 @@ var knockback_force := 200.0
 @onready var col_attack = attack_area.get_node("CollisionAttack")
 @onready var agro_area = pivot.get_node("AgroArea")
 @export var attack_range: float = 40.0
+@onready var enemy_shoot: AudioStreamPlayer = $"../enemy_shoot"
 
 
+
+var attack_sfx_played: bool = false
 var detection
 var movement
 var combat
@@ -62,11 +65,16 @@ func _state_run(delta):
 func _state_attack():
 	body.velocity.x = 0
 	body.move_and_slide()
-
+	if enemy_shoot and not enemy_shoot.is_playing():
+		enemy_shoot.play()
+	attack_sfx_played = true
 	col_attack.disabled = false
 	combat.check_attack_hit()
 
 	if anim.is_finished():
+		if enemy_shoot:
+			enemy_shoot.stop()
+		attack_sfx_played = false
 		col_attack.disabled = true
 		state = State.RUN
 		anim.play_run()

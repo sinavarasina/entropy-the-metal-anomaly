@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dfnigy5vwrfp6"]
+[gd_scene load_steps=44 format=3 uid="uid://dfnigy5vwrfp6"]
 
 [ext_resource type="Texture2D" uid="uid://cudsy30dto65h" path="res://assets/sprites/Enemies/Droid Zapper/wake.png" id="1_0awyv"]
 [ext_resource type="Texture2D" uid="uid://c1f0pj7fg44oo" path="res://assets/sprites/Enemies/Droid Zapper/attack.png" id="1_buao6"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://clbryy0idqymh" path="res://entities/enemies/DroidZapper/stats.gd" id="3_bdv2m"]
 [ext_resource type="Texture2D" uid="uid://cdybll03a65u2" path="res://assets/sprites/Enemies/Droid Zapper/run.png" id="3_knwep"]
 [ext_resource type="Script" uid="uid://dmh8g0u3uo7my" path="res://entities/enemies/DroidZapper/ai/ai.gd" id="7_8qbl1"]
+[ext_resource type="AudioStream" uid="uid://bxfwgidpscqxq" path="res://assets/SoundEffect/Shoot/Shoot 5.mp3" id="9_1khy2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1khy2"]
 atlas = ExtResource("1_buao6")
@@ -289,3 +290,6 @@ script = ExtResource("3_bdv2m")
 
 [node name="AI" type="Node" parent="."]
 script = ExtResource("7_8qbl1")
+
+[node name="enemy_shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_1khy2")
