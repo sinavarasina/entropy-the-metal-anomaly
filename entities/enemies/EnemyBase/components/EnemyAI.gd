@@ -54,10 +54,18 @@ func get_state_node(state_name: String) -> EnemyState:
 		return null
 
 func trigger_knockback(source_pos: Vector2):
-	var kb_node = get_state_node("Knockback")
-	if kb_node:
-		change_state(kb_node)
-		kb_node.apply_force(source_pos)
+	if current_state and current_state.name == "Death":
+		return
+
+	if has_node("Knockback"):
+		var kb_state = get_node("Knockback") as EnemyState
+		
+		if kb_state:
+			change_state(kb_state)
+			if kb_state.has_method("apply_force"):
+				kb_state.apply_force(source_pos)
+		else:
+			printerr(entity.name, " Error: Node 'Knockback' exist, but wrong class")
 
 func _on_anim_finished() -> void:
 	if current_state:
