@@ -1,13 +1,11 @@
-[gd_scene load_steps=41 format=3 uid="uid://dvw2yxt3dne22"]
+[gd_scene load_steps=48 format=3 uid="uid://dvw2yxt3dne22"]
 
-[ext_resource type="Script" uid="uid://copo3u0s1nw2t" path="res://entities/enemies/BarrelKnight/barrel_knight.gd" id="1_arfg4"]
+[ext_resource type="Script" uid="uid://dxua3phnhk37f" path="res://entities/enemies/EnemyBase/base/EnemyEntity.gd" id="1_qih3o"]
 [ext_resource type="Texture2D" uid="uid://c0t3f4tuhxx7v" path="res://assets/sprites/Enemies/Barrel Knight/A-attacks1.png" id="2_arfg4"]
 [ext_resource type="Texture2D" uid="uid://3byfg8w416nf" path="res://assets/sprites/Enemies/Barrel Knight/A-attacks2.png" id="3_8y5fq"]
 [ext_resource type="Texture2D" uid="uid://b4cmstgiudma3" path="res://assets/sprites/Enemies/Barrel Knight/A-attacks3.png" id="4_yb2w8"]
-[ext_resource type="Script" uid="uid://cbjyfcvqlappe" path="res://entities/enemies/DroidZapper/anim.gd" id="5_ctnrq"]
 [ext_resource type="Texture2D" uid="uid://syyxr1p3vr60" path="res://assets/sprites/Enemies/Barrel Knight/A-attacks4.png" id="5_drsq5"]
 [ext_resource type="Texture2D" uid="uid://c1j1gfopkmbkp" path="res://assets/sprites/Enemies/Barrel Knight/A-attacks5.png" id="6_c5jg6"]
-[ext_resource type="Script" uid="uid://clbryy0idqymh" path="res://entities/enemies/DroidZapper/stats.gd" id="6_u3rhu"]
 [ext_resource type="Texture2D" uid="uid://bavobmaphqsdx" path="res://assets/sprites/Enemies/Barrel Knight/hit1.png" id="7_uy58e"]
 [ext_resource type="Texture2D" uid="uid://b067ce17oif1f" path="res://assets/sprites/Enemies/Barrel Knight/hit2.png" id="8_qih3o"]
 [ext_resource type="Texture2D" uid="uid://e2noqclyt075" path="res://assets/sprites/Enemies/Barrel Knight/run1.png" id="9_fr3pm"]
@@ -19,7 +17,16 @@
 [ext_resource type="Texture2D" uid="uid://dmfyncjlcpvh5" path="res://assets/sprites/Enemies/Barrel Knight/wake1.png" id="15_otixw"]
 [ext_resource type="Texture2D" uid="uid://cp7rtrj0ctxfv" path="res://assets/sprites/Enemies/Barrel Knight/wake2.png" id="16_uw0ri"]
 [ext_resource type="Texture2D" uid="uid://bn4o8wnyvsfeo" path="res://assets/sprites/Enemies/Barrel Knight/wake3.png" id="17_ag7vh"]
-[ext_resource type="Script" uid="uid://3sx48qthi8x0" path="res://entities/enemies/BarrelKnight/ai/ai.gd" id="20_arfg4"]
+[ext_resource type="Script" uid="uid://50vrcdpwkrfa" path="res://entities/enemies/EnemyBase/components/EnemyVision.gd" id="18_fr3pm"]
+[ext_resource type="Script" uid="uid://cnxco00qfe8fl" path="res://entities/enemies/EnemyBase/components/EnemyAI.gd" id="19_u5321"]
+[ext_resource type="Script" uid="uid://bhu6ax2xbpuw6" path="res://entities/enemies/EnemyBase/components/states/StateIdle.gd" id="20_yp1s8"]
+[ext_resource type="Script" uid="uid://dx3dbyaikdnx5" path="res://entities/enemies/EnemyBase/components/states/StateAttack.gd" id="21_3yfh3"]
+[ext_resource type="Script" uid="uid://dlxnox8qpetqm" path="res://entities/enemies/EnemyBase/components/states/StateWake.gd" id="22_xkfbc"]
+[ext_resource type="Script" uid="uid://n473ljcasuef" path="res://entities/enemies/EnemyBase/components/states/StateChase.gd" id="23_vb01j"]
+[ext_resource type="Script" uid="uid://b3ajtn130nbkx" path="res://entities/enemies/EnemyBase/components/states/StateKnockback.gd" id="24_otixw"]
+[ext_resource type="Script" uid="uid://p625qkjbkjvr" path="res://entities/enemies/EnemyBase/components/states/StateDeath.gd" id="25_fr3pm"]
+[ext_resource type="Script" uid="uid://4aac5vo8vyol" path="res://entities/enemies/EnemyBase/components/EnemyStats.gd" id="25_qih3o"]
+[ext_resource type="Script" uid="uid://dkgunqogw6x5f" path="res://entities/enemies/EnemyBase/components/EnemyMover.gd" id="26_ag7vh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mats0"]
 atlas = ExtResource("2_arfg4")
@@ -167,7 +174,7 @@ radius = 11.0
 height = 38.0
 
 [node name="BarrelKnight" type="CharacterBody2D" groups=["enemies"]]
-script = ExtResource("1_arfg4")
+script = ExtResource("1_qih3o")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
@@ -176,12 +183,12 @@ texture_filter = 1
 position = Vector2(52, -18)
 scale = Vector2(1.61989, 1.67455)
 sprite_frames = SubResource("SpriteFrames_1khy2")
-animation = &"Wake"
-frame_progress = 0.909093
+animation = &"DamagedNDeath"
 
-[node name="AgroArea" type="Area2D" parent="Marker2D"]
+[node name="VisionArea" type="Area2D" parent="Marker2D"]
+script = ExtResource("18_fr3pm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/AgroArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/VisionArea"]
 position = Vector2(2, -47)
 shape = SubResource("RectangleShape2D_knwep")
 
@@ -195,11 +202,30 @@ shape = SubResource("RectangleShape2D_buao6")
 position = Vector2(0, -11)
 shape = SubResource("CapsuleShape2D_0riub")
 
-[node name="Anim" type="Node" parent="."]
-script = ExtResource("5_ctnrq")
+[node name="AI" type="Node" parent="."]
+script = ExtResource("19_u5321")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="AI"]
+script = ExtResource("20_yp1s8")
+
+[node name="Attack" type="Node" parent="AI"]
+script = ExtResource("21_3yfh3")
+
+[node name="Wake" type="Node" parent="AI"]
+script = ExtResource("22_xkfbc")
+
+[node name="Chase" type="Node" parent="AI"]
+script = ExtResource("23_vb01j")
+
+[node name="Knockback" type="Node" parent="AI"]
+script = ExtResource("24_otixw")
+
+[node name="Death" type="Node" parent="AI"]
+script = ExtResource("25_fr3pm")
 
 [node name="Stats" type="Node" parent="."]
-script = ExtResource("6_u3rhu")
+script = ExtResource("25_qih3o")
 
-[node name="AI" type="Node" parent="."]
-script = ExtResource("20_arfg4")
+[node name="Mover" type="Node" parent="."]
+script = ExtResource("26_ag7vh")

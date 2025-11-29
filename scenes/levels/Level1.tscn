@@ -12,11 +12,11 @@
 [node name="MapStation" parent="." instance=ExtResource("1_j08sa")]
 position = Vector2(7, 4)
 
+[node name="DroidZapper4" parent="." instance=ExtResource("2_x4si1")]
+position = Vector2(397, 244)
+
 [node name="DroidZapper" parent="." instance=ExtResource("2_x4si1")]
 position = Vector2(701, 243)
-
-[node name="DroidZapper" parent="DroidZapper" instance=ExtResource("2_x4si1")]
-position = Vector2(-304, 1)
 
 [node name="Cyborg" parent="." instance=ExtResource("2_j08sa")]
 position = Vector2(661, 393)

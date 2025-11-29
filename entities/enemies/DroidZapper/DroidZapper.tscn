@@ -1,13 +1,19 @@
-[gd_scene load_steps=43 format=3 uid="uid://dfnigy5vwrfp6"]
+[gd_scene load_steps=50 format=3 uid="uid://dfnigy5vwrfp6"]
 
 [ext_resource type="Texture2D" uid="uid://cudsy30dto65h" path="res://assets/sprites/Enemies/Droid Zapper/wake.png" id="1_0awyv"]
+[ext_resource type="Script" uid="uid://dxua3phnhk37f" path="res://entities/enemies/EnemyBase/base/EnemyEntity.gd" id="1_1dxl3"]
 [ext_resource type="Texture2D" uid="uid://c1f0pj7fg44oo" path="res://assets/sprites/Enemies/Droid Zapper/attack.png" id="1_buao6"]
-[ext_resource type="Script" uid="uid://illsu30t1dfa" path="res://entities/enemies/DroidZapper/droid_zapper.gd" id="1_knwep"]
 [ext_resource type="Texture2D" uid="uid://dmeovddptnisf" path="res://assets/sprites/Enemies/Droid Zapper/damaged and death.png" id="2_8qbl1"]
-[ext_resource type="Script" uid="uid://cbjyfcvqlappe" path="res://entities/enemies/DroidZapper/anim.gd" id="2_bdv2m"]
-[ext_resource type="Script" uid="uid://clbryy0idqymh" path="res://entities/enemies/DroidZapper/stats.gd" id="3_bdv2m"]
 [ext_resource type="Texture2D" uid="uid://cdybll03a65u2" path="res://assets/sprites/Enemies/Droid Zapper/run.png" id="3_knwep"]
-[ext_resource type="Script" uid="uid://dmh8g0u3uo7my" path="res://entities/enemies/DroidZapper/ai/ai.gd" id="7_8qbl1"]
+[ext_resource type="Script" uid="uid://50vrcdpwkrfa" path="res://entities/enemies/EnemyBase/components/EnemyVision.gd" id="6_r6g1k"]
+[ext_resource type="Script" uid="uid://4aac5vo8vyol" path="res://entities/enemies/EnemyBase/components/EnemyStats.gd" id="7_eee4d"]
+[ext_resource type="Script" uid="uid://dkgunqogw6x5f" path="res://entities/enemies/EnemyBase/components/EnemyMover.gd" id="8_57fds"]
+[ext_resource type="Script" uid="uid://cnxco00qfe8fl" path="res://entities/enemies/EnemyBase/components/EnemyAI.gd" id="9_tfi14"]
+[ext_resource type="Script" uid="uid://dx3dbyaikdnx5" path="res://entities/enemies/EnemyBase/components/states/StateAttack.gd" id="10_1fu6b"]
+[ext_resource type="Script" uid="uid://bhu6ax2xbpuw6" path="res://entities/enemies/EnemyBase/components/states/StateIdle.gd" id="11_616lm"]
+[ext_resource type="Script" uid="uid://n473ljcasuef" path="res://entities/enemies/EnemyBase/components/states/StateChase.gd" id="12_ifdbu"]
+[ext_resource type="Script" uid="uid://p625qkjbkjvr" path="res://entities/enemies/EnemyBase/components/states/StateDeath.gd" id="13_juptk"]
+[ext_resource type="Script" uid="uid://dlxnox8qpetqm" path="res://entities/enemies/EnemyBase/components/states/StateWake.gd" id="14_r6g1k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1khy2"]
 atlas = ExtResource("1_buao6")
@@ -252,8 +258,31 @@ size = Vector2(73.5, 44.25)
 radius = 14.0
 height = 62.0
 
+[sub_resource type="GDScript" id="GDScript_r6g1k"]
+script/source = "extends Node
+class_name StateKnockback
+
+var ai
+var timer := 0.15
+
+func _init(ai_ref):
+	ai = ai_ref
+
+func enter():
+	timer = 0.15
+
+func update(delta):
+	ai.body.move_and_slide()
+	timer -= delta
+	if timer <= 0:
+		ai.change_state(\"run\")
+
+func exit():
+	pass
+"
+
 [node name="DroidZapper" type="CharacterBody2D" groups=["enemies"]]
-script = ExtResource("1_knwep")
+script = ExtResource("1_1dxl3")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
@@ -263,11 +292,11 @@ position = Vector2(24, -27)
 scale = Vector2(1.84483, 2.03659)
 sprite_frames = SubResource("SpriteFrames_1khy2")
 animation = &"Attack"
-frame_progress = 0.628187
 
-[node name="AgroArea" type="Area2D" parent="Marker2D"]
+[node name="VisionArea" type="Area2D" parent="Marker2D"]
+script = ExtResource("6_r6g1k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/AgroArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/VisionArea"]
 position = Vector2(1, -46.8125)
 shape = SubResource("RectangleShape2D_knwep")
 
@@ -281,11 +310,32 @@ shape = SubResource("RectangleShape2D_buao6")
 position = Vector2(0, -16)
 shape = SubResource("CapsuleShape2D_0riub")
 
-[node name="Anim" type="Node" parent="."]
-script = ExtResource("2_bdv2m")
-
 [node name="Stats" type="Node" parent="."]
-script = ExtResource("3_bdv2m")
+script = ExtResource("7_eee4d")
+max_hp = 5000.0
+defense = 5.0
+
+[node name="Mover" type="Node" parent="."]
+script = ExtResource("8_57fds")
 
 [node name="AI" type="Node" parent="."]
-script = ExtResource("7_8qbl1")
+script = ExtResource("9_tfi14")
+initial_state = NodePath("Idle")
+
+[node name="Attack" type="Node" parent="AI"]
+script = ExtResource("10_1fu6b")
+
+[node name="Idle" type="Node" parent="AI"]
+script = ExtResource("11_616lm")
+
+[node name="Chase" type="Node" parent="AI"]
+script = ExtResource("12_ifdbu")
+
+[node name="Death" type="Node" parent="AI"]
+script = ExtResource("13_juptk")
+
+[node name="Wake" type="Node" parent="AI"]
+script = ExtResource("14_r6g1k")
+
+[node name="Knockback" type="Node" parent="AI"]
+script = SubResource("GDScript_r6g1k")

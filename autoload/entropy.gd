@@ -1,7 +1,7 @@
 extends Node
 class_name EntropySystem
 
-var entropy: float = 0.0
+var entropy: float = 1.0
 var multiplier: float = 1.0
 
 func add_entropy(amount: float) -> void:
