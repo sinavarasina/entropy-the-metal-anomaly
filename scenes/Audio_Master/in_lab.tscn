@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bxqgetgbc5cto"]
+
+[node name="inLab" type="AudioStreamPlayer2D"]
+autoplay = true

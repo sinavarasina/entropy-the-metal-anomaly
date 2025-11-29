@@ -113,13 +113,13 @@ func fire_bullet():
 func _perform_jump():
 	cyborg.movement.jump(cyborg.stats.jump_force)
 	cyborg.anim.play_jump()
-	cyborg.jump.play()
+	AudioManager.play_sfx("jump")
 
 func _perform_double_jump():
 	cyborg.movement.jump(cyborg.stats.double_jump_force)
 	cyborg.anim.play_double_jump()
 	can_double_jump = false
-	cyborg.jump.play()
+	AudioManager.play_sfx("jump")
 
 func change_state(new_state: State):
 	if state == State.RUN and new_state != State.RUN:
