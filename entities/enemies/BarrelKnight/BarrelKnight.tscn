@@ -1,18 +1,31 @@
-[gd_scene load_steps=51 format=3 uid="uid://dvw2yxt3dne22"]
+[gd_scene load_steps=77 format=3 uid="uid://dvw2yxt3dne22"]
 
 [ext_resource type="Script" uid="uid://dxua3phnhk37f" path="res://entities/enemies/EnemyBase/base/EnemyEntity.gd" id="1_qih3o"]
 [ext_resource type="Texture2D" uid="uid://c0t3f4tuhxx7v" path="res://assets/sprites/Enemies/Barrel Knight/A-attacks1.png" id="2_arfg4"]
+[ext_resource type="Texture2D" uid="uid://d3ph4vdlp2pht" path="res://assets/sprites/Enemies/Barrel Knight/B-attacks1.png" id="2_wr4xd"]
+[ext_resource type="Texture2D" uid="uid://dlu66m57ve2ej" path="res://assets/sprites/Enemies/Barrel Knight/B-attacks2.png" id="3_5qcga"]
 [ext_resource type="Texture2D" uid="uid://3byfg8w416nf" path="res://assets/sprites/Enemies/Barrel Knight/A-attacks2.png" id="3_8y5fq"]
+[ext_resource type="Texture2D" uid="uid://cppbmfekb3m8j" path="res://assets/sprites/Enemies/Barrel Knight/B-attacks3.png" id="4_dtltr"]
 [ext_resource type="Texture2D" uid="uid://b4cmstgiudma3" path="res://assets/sprites/Enemies/Barrel Knight/A-attacks3.png" id="4_yb2w8"]
+[ext_resource type="Texture2D" uid="uid://bn41dp2d6cclb" path="res://assets/sprites/Enemies/Barrel Knight/B-attacks4.png" id="5_bi803"]
 [ext_resource type="Texture2D" uid="uid://syyxr1p3vr60" path="res://assets/sprites/Enemies/Barrel Knight/A-attacks4.png" id="5_drsq5"]
 [ext_resource type="Texture2D" uid="uid://c1j1gfopkmbkp" path="res://assets/sprites/Enemies/Barrel Knight/A-attacks5.png" id="6_c5jg6"]
+[ext_resource type="Texture2D" uid="uid://br4mlonhk4xnl" path="res://assets/sprites/Enemies/Barrel Knight/B-attacks5.png" id="6_tdawc"]
+[ext_resource type="Texture2D" uid="uid://00xou5s0ijea" path="res://assets/sprites/Enemies/Barrel Knight/B-attacks6.png" id="7_7sfn8"]
 [ext_resource type="Texture2D" uid="uid://bavobmaphqsdx" path="res://assets/sprites/Enemies/Barrel Knight/hit1.png" id="7_uy58e"]
+[ext_resource type="Texture2D" uid="uid://cfkl75ek0mu1h" path="res://assets/sprites/Enemies/Barrel Knight/B-attacks7.png" id="8_do4tq"]
 [ext_resource type="Texture2D" uid="uid://b067ce17oif1f" path="res://assets/sprites/Enemies/Barrel Knight/hit2.png" id="8_qih3o"]
 [ext_resource type="Texture2D" uid="uid://e2noqclyt075" path="res://assets/sprites/Enemies/Barrel Knight/run1.png" id="9_fr3pm"]
+[ext_resource type="Texture2D" uid="uid://cbhr45dvw7nvs" path="res://assets/sprites/Enemies/Barrel Knight/B-attacks8.png" id="9_lhc5y"]
 [ext_resource type="Texture2D" uid="uid://ca01yguomhwlc" path="res://assets/sprites/Enemies/Barrel Knight/run2.png" id="10_u5321"]
+[ext_resource type="Texture2D" uid="uid://cgtb0g3rfpmr1" path="res://assets/sprites/Enemies/Barrel Knight/B-attacks9.png" id="10_ums54"]
+[ext_resource type="Texture2D" uid="uid://ppnqf0s845xg" path="res://assets/sprites/Enemies/Barrel Knight/B-attacks10.png" id="11_ejicw"]
 [ext_resource type="Texture2D" uid="uid://b5w4w1nffy86d" path="res://assets/sprites/Enemies/Barrel Knight/run3.png" id="11_yp1s8"]
 [ext_resource type="Texture2D" uid="uid://dvj7knraaggu4" path="res://assets/sprites/Enemies/Barrel Knight/run4.png" id="12_3yfh3"]
+[ext_resource type="Texture2D" uid="uid://85axkm3j8ql4" path="res://assets/sprites/Enemies/Barrel Knight/B-attacks11.png" id="12_6rmw2"]
+[ext_resource type="Texture2D" uid="uid://dfpm50vvv8mx8" path="res://assets/sprites/Enemies/Barrel Knight/B-attacks12.png" id="13_5pbgg"]
 [ext_resource type="Texture2D" uid="uid://byiuhocuwsyie" path="res://assets/sprites/Enemies/Barrel Knight/run5.png" id="13_xkfbc"]
+[ext_resource type="Texture2D" uid="uid://d30hycf4lcwar" path="res://assets/sprites/Enemies/Barrel Knight/B-attacks13.png" id="14_8vrup"]
 [ext_resource type="Texture2D" uid="uid://b4rhv3j3wtuc" path="res://assets/sprites/Enemies/Barrel Knight/run6.png" id="14_vb01j"]
 [ext_resource type="Texture2D" uid="uid://dmfyncjlcpvh5" path="res://assets/sprites/Enemies/Barrel Knight/wake1.png" id="15_otixw"]
 [ext_resource type="Texture2D" uid="uid://cp7rtrj0ctxfv" path="res://assets/sprites/Enemies/Barrel Knight/wake2.png" id="16_uw0ri"]
@@ -28,6 +41,58 @@
 [ext_resource type="Script" uid="uid://4aac5vo8vyol" path="res://entities/enemies/EnemyBase/components/EnemyStats.gd" id="25_qih3o"]
 [ext_resource type="Script" uid="uid://dkgunqogw6x5f" path="res://entities/enemies/EnemyBase/components/EnemyMover.gd" id="26_ag7vh"]
 [ext_resource type="Script" uid="uid://cw206nlm8iqeo" path="res://entities/enemies/EnemyBase/components/EnemyHealthBar.gd" id="28_u5321"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kyv4"]
+atlas = ExtResource("2_wr4xd")
+region = Rect2(0, 0, 160, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayv22"]
+atlas = ExtResource("3_5qcga")
+region = Rect2(0, 0, 160, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v623"]
+atlas = ExtResource("4_dtltr")
+region = Rect2(0, 0, 160, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rld43"]
+atlas = ExtResource("5_bi803")
+region = Rect2(0, 0, 160, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m85gb"]
+atlas = ExtResource("6_tdawc")
+region = Rect2(0, 0, 160, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krhis"]
+atlas = ExtResource("7_7sfn8")
+region = Rect2(0, 0, 160, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt0x7"]
+atlas = ExtResource("8_do4tq")
+region = Rect2(0, 0, 160, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1l14"]
+atlas = ExtResource("9_lhc5y")
+region = Rect2(0, 0, 160, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smyui"]
+atlas = ExtResource("10_ums54")
+region = Rect2(0, 0, 160, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68fb5"]
+atlas = ExtResource("11_ejicw")
+region = Rect2(0, 0, 160, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxiw6"]
+atlas = ExtResource("12_6rmw2")
+region = Rect2(0, 0, 160, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vphxg"]
+atlas = ExtResource("13_5pbgg")
+region = Rect2(0, 0, 160, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v602w"]
+atlas = ExtResource("14_8vrup")
+region = Rect2(0, 0, 160, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mats0"]
 atlas = ExtResource("2_arfg4")
@@ -97,6 +162,50 @@ region = Rect2(0, 0, 160, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_8kyv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayv22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7v623")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rld43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m85gb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krhis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qt0x7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1l14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smyui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68fb5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxiw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vphxg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v602w")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_mats0")
 }, {
 "duration": 1.0,
@@ -112,7 +221,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_56h1n")
 }],
 "loop": true,
-"name": &"Attack",
+"name": &"Attack3",
 "speed": 5.0
 }, {
 "frames": [{
@@ -168,7 +277,7 @@ animations = [{
 size = Vector2(830, 191.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_buao6"]
-size = Vector2(46.75, 17.125)
+size = Vector2(167.75, 17.125)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0riub"]
 radius = 11.0
@@ -190,10 +299,11 @@ texture_filter = 1
 position = Vector2(52, -18)
 scale = Vector2(1.61989, 1.67455)
 sprite_frames = SubResource("SpriteFrames_1khy2")
-animation = &"Run"
-frame_progress = 0.3310183333332961
+animation = &"Attack"
+frame_progress = 0.247823
 
 [node name="VisionArea" type="Area2D" parent="Marker2D"]
+visible = false
 script = ExtResource("18_fr3pm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/VisionArea"]
@@ -203,10 +313,11 @@ shape = SubResource("RectangleShape2D_knwep")
 [node name="AttackArea" type="Area2D" parent="Marker2D"]
 
 [node name="CollisionAttack" type="CollisionShape2D" parent="Marker2D/AttackArea"]
-position = Vector2(25.625, -0.4375)
+position = Vector2(86.125, -0.4375)
 shape = SubResource("RectangleShape2D_buao6")
 
 [node name="CollisionStandard" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -11)
 shape = SubResource("CapsuleShape2D_0riub")
 

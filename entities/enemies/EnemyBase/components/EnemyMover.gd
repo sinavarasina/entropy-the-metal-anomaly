@@ -1,7 +1,7 @@
 extends Node
 class_name EnemyMover
 
-@export var speed: float = 60.0
+@export var speed: float = 100.0
 @export var gravity: float = 900.0
 
 @onready var body: CharacterBody2D = get_parent()
