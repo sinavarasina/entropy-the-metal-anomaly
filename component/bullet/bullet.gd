@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("enemies"):
 		if body.has_method("apply_damage"):
-			body.apply_damage(damage) 
+			body.apply_damage(damage, global_position) 
 		queue_free()
 		
 	elif body.name != "Cyborg":

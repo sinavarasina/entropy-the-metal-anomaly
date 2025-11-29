@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://n473ljcasuef" path="res://entities/enemies/EnemyBase/components/states/StateChase.gd" id="12_ifdbu"]
 [ext_resource type="Script" uid="uid://p625qkjbkjvr" path="res://entities/enemies/EnemyBase/components/states/StateDeath.gd" id="13_juptk"]
 [ext_resource type="Script" uid="uid://dlxnox8qpetqm" path="res://entities/enemies/EnemyBase/components/states/StateWake.gd" id="14_r6g1k"]
+[ext_resource type="Script" uid="uid://b3ajtn130nbkx" path="res://entities/enemies/EnemyBase/components/states/StateKnockback.gd" id="15_eee4d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1khy2"]
 atlas = ExtResource("1_buao6")
@@ -258,29 +259,6 @@ size = Vector2(73.5, 44.25)
 radius = 14.0
 height = 62.0
 
-[sub_resource type="GDScript" id="GDScript_r6g1k"]
-script/source = "extends Node
-class_name StateKnockback
-
-var ai
-var timer := 0.15
-
-func _init(ai_ref):
-	ai = ai_ref
-
-func enter():
-	timer = 0.15
-
-func update(delta):
-	ai.body.move_and_slide()
-	timer -= delta
-	if timer <= 0:
-		ai.change_state(\"run\")
-
-func exit():
-	pass
-"
-
 [node name="DroidZapper" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_1dxl3")
 
@@ -338,4 +316,4 @@ script = ExtResource("13_juptk")
 script = ExtResource("14_r6g1k")
 
 [node name="Knockback" type="Node" parent="AI"]
-script = SubResource("GDScript_r6g1k")
+script = ExtResource("15_eee4d")
