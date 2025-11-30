@@ -276,7 +276,7 @@ position = Vector2(24, -27)
 scale = Vector2(1.84483, 2.03659)
 sprite_frames = SubResource("SpriteFrames_1khy2")
 animation = &"DamagedNDeath"
-frame_progress = 0.3664661111103994
+frame_progress = 0.366466
 
 [node name="VisionArea" type="Area2D" parent="Marker2D"]
 script = ExtResource("6_r6g1k")
