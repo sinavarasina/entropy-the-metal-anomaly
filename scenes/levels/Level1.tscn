@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmubpk75m2jxd"]
+[gd_scene load_steps=7 format=3 uid="uid://cmubpk75m2jxd"]
 
 [ext_resource type="PackedScene" uid="uid://cp1h3asd6cidt" path="res://scenes/map/station.tscn" id="1_j08sa"]
 [ext_resource type="PackedScene" uid="uid://dra0cogy3bnme" path="res://entities/player/Cyborg/cyborg.tscn" id="2_j08sa"]
 [ext_resource type="PackedScene" uid="uid://dfnigy5vwrfp6" path="res://entities/enemies/DroidZapper/DroidZapper.tscn" id="2_x4si1"]
 [ext_resource type="PackedScene" uid="uid://dvw2yxt3dne22" path="res://entities/enemies/BarrelKnight/BarrelKnight.tscn" id="5_68ib6"]
 [ext_resource type="AudioStream" uid="uid://cdcp44ekxommo" path="res://assets/BGM/1128.ogg" id="5_76cw8"]
+[ext_resource type="PackedScene" uid="uid://c5ckympfh7one" path="res://component/element-in-game/door.tscn" id="6_76cw8"]
 
 [node name="Level1" type="Node2D"]
 
@@ -12,9 +13,11 @@
 position = Vector2(7, 4)
 
 [node name="DroidZapper4" parent="." instance=ExtResource("2_x4si1")]
+visible = false
 position = Vector2(397, 244)
 
 [node name="DroidZapper" parent="." instance=ExtResource("2_x4si1")]
+visible = false
 position = Vector2(701, 243)
 
 [node name="Cyborg" parent="." instance=ExtResource("2_j08sa")]
@@ -31,25 +34,41 @@ stream = ExtResource("5_76cw8")
 autoplay = true
 
 [node name="DroidZapper2" parent="." instance=ExtResource("2_x4si1")]
+visible = false
 position = Vector2(466, 468)
 
 [node name="DroidZapper3" parent="." instance=ExtResource("2_x4si1")]
+visible = false
 position = Vector2(262, 467)
 
 [node name="BarrelKnight" parent="." instance=ExtResource("5_68ib6")]
+visible = false
 position = Vector2(1264, 39)
 
 [node name="BarrelKnight2" parent="." instance=ExtResource("5_68ib6")]
+visible = false
 position = Vector2(1428, 199)
 
 [node name="DroidZapper5" parent="." instance=ExtResource("2_x4si1")]
+visible = false
 position = Vector2(1483, -331)
 
 [node name="BarrelKnight3" parent="." instance=ExtResource("5_68ib6")]
+visible = false
 position = Vector2(1941, -292)
 
 [node name="DroidZapper6" parent="." instance=ExtResource("2_x4si1")]
+visible = false
 position = Vector2(2347, -652)
 
 [node name="DroidZapper7" parent="." instance=ExtResource("2_x4si1")]
+visible = false
 position = Vector2(1589, -544)
+
+[node name="door" parent="." instance=ExtResource("6_76cw8")]
+position = Vector2(2069, -188)
+scale = Vector2(1.26778, 0.994979)
+
+[node name="door2" parent="." instance=ExtResource("6_76cw8")]
+position = Vector2(2168, -987)
+scale = Vector2(1.80427, 1.33365)
