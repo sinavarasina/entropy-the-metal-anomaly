@@ -1,8 +1,9 @@
-[gd_scene load_steps=91 format=3 uid="uid://dra0cogy3bnme"]
+[gd_scene load_steps=98 format=3 uid="uid://dra0cogy3bnme"]
 
 [ext_resource type="Script" uid="uid://cbdvnaof2msm" path="res://entities/player/Cyborg/cyborg.gd" id="1_h6dt7"]
 [ext_resource type="Texture2D" uid="uid://cjauxlrp8ekyl" path="res://assets/sprites/3 Cyborg/No Weapon/Cyborg_idle.png" id="2_5yirn"]
 [ext_resource type="Texture2D" uid="uid://b5w2qpun2mw6f" path="res://assets/sprites/3 Cyborg/No Weapon/Cyborg_climb.png" id="2_xyaby"]
+[ext_resource type="Texture2D" uid="uid://ddajck42bpsis" path="res://assets/sprites/3 Cyborg/No Weapon/Cyborg_death.png" id="3_2pabm"]
 [ext_resource type="Texture2D" uid="uid://dp36101ship0i" path="res://assets/sprites/3 Cyborg/No Weapon/Cyborg_doublejump.png" id="3_hbmkm"]
 [ext_resource type="Texture2D" uid="uid://bhprtfk4lnu3e" path="res://assets/sprites/3 Cyborg/No Weapon/Fall.png" id="4_eom1p"]
 [ext_resource type="Texture2D" uid="uid://dybjy4mw2s0wa" path="res://assets/sprites/3 Cyborg/No Weapon/Cyborg_jump.png" id="5_bnnkx"]
@@ -61,6 +62,30 @@ region = Rect2(192, 0, 26, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_s40nu"]
 atlas = ExtResource("2_xyaby")
 region = Rect2(240, 0, 26, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74q75"]
+atlas = ExtResource("3_2pabm")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3mrk"]
+atlas = ExtResource("3_2pabm")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dtw5"]
+atlas = ExtResource("3_2pabm")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyl8x"]
+atlas = ExtResource("3_2pabm")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjx3r"]
+atlas = ExtResource("3_2pabm")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aic6k"]
+atlas = ExtResource("3_2pabm")
+region = Rect2(240, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v0jxb"]
 atlas = ExtResource("3_hbmkm")
@@ -277,6 +302,29 @@ animations = [{
 }],
 "loop": true,
 "name": &"Climb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74q75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3mrk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dtw5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vyl8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjx3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aic6k")
+}],
+"loop": true,
+"name": &"Death",
 "speed": 5.0
 }, {
 "frames": [{
@@ -531,7 +579,7 @@ texture_filter = 1
 position = Vector2(-18, -30)
 scale = Vector2(1.33236, 1.25)
 sprite_frames = SubResource("SpriteFrames_ut818")
-animation = &"FiringHotLaserbeam"
+animation = &"Death"
 centered = false
 
 [node name="Muzzle" type="Marker2D" parent="Pivot"]

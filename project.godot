@@ -24,7 +24,7 @@ entropy_system="*res://autoload/entropy.gd"
 [global_group]
 
 enemies="group for enemies"
-player=""
+player="group for player"
 
 [input]
 

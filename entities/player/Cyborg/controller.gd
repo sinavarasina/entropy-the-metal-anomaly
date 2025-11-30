@@ -1,7 +1,7 @@
 extends Node
 class_name CyborgController
 
-enum State { IDLE, RUN, AIR, ATTACK }
+enum State { IDLE, RUN, AIR, ATTACK, DEAD }
 var state: State = State.IDLE
 
 var cyborg: Cyborg
@@ -9,10 +9,14 @@ var can_double_jump: bool = true
 
 func setup(player_ref: Cyborg):
 	cyborg = player_ref
+	cyborg.stats.player_died.connect(_on_player_died)
 
 func update(delta: float):
 	if state != State.ATTACK and cyborg.input.is_fire_pressed():
 		change_state(State.ATTACK)
+		return
+	if state == State.DEAD:
+		_state_dead(delta)
 		return
 
 	match state:
@@ -20,6 +24,16 @@ func update(delta: float):
 		State.RUN: _state_run(delta)
 		State.AIR: _state_air(delta)
 		State.ATTACK: _state_attack(delta)
+		
+func _on_player_died():
+	if state != State.DEAD:
+		change_state(State.DEAD)
+		print("Player dead!")
+		
+func _state_dead(delta: float):
+	cyborg.movement.apply_gravity(delta)
+	cyborg.movement.apply_friction(cyborg.stats.ground_friction, delta)
+	cyborg.move_and_slide()
 
 
 func _state_idle(delta: float):
@@ -149,3 +163,5 @@ func change_state(new_state: State):
 			fire_bullet()
 		State.AIR: 
 			pass
+		State.DEAD:
+			cyborg.anim.play_death()

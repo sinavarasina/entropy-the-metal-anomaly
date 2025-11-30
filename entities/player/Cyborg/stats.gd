@@ -1,8 +1,11 @@
 extends Node
 class_name CyborgStats
 
+signal health_changed(current_hp: float, max_hp: float)
+signal player_died
+
 # ===== Combat Stats =====
-@export var hp: float = 500
+@export var max_hp: float = 500
 @export var attack_damage: float = 100
 @export var luck: float = 10.0
 @export var base_crit_rate: float = 0.1 
@@ -23,6 +26,22 @@ class_name CyborgStats
 @export var fall_threshold: float = 2000.0
 @export var jump_threshold: float = -10.0
 @export var run_threshold: float = 0.1
+
+var current_hp: float
+
+func _ready() -> void:
+	current_hp = max_hp
+	health_changed.emit(current_hp, max_hp)
+	
+func take_damage(amount: float) -> void:
+	current_hp -= amount
+	print("Player HP: ", current_hp)
+	
+	health_changed.emit(current_hp, max_hp)
+	
+	if current_hp <= 0:
+		current_hp = 0
+		player_died.emit()
 
 func get_crit_rate() -> float:
 	return base_crit_rate + (luck * 0.001)

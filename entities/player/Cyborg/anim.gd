@@ -21,5 +21,11 @@ func play_fall():
 func play_attack():
 	sprite.play("FiringHotLaserbeam")
 
+func play_death():
+	sprite.play("Death") 
+	var frames = sprite.sprite_frames
+	if frames.has_animation("Death"):
+		frames.set_animation_loop("Death", false)
+
 func is_finished() -> bool:
 	return not sprite.is_playing()

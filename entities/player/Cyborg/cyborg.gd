@@ -13,6 +13,7 @@ class_name Cyborg
 @onready var jump: AudioStreamPlayer = $jump
 
 func _ready() -> void:
+	add_to_group("player")
 	controller.setup(self)
 	
 	var sprite_frames = anim.sprite.sprite_frames
@@ -21,3 +22,11 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	controller.update(delta)
+
+func apply_damage(amount: float, source_pos: Vector2 = Vector2.ZERO, is_crit: bool = false, is_kb: bool = false, status_effect: PackedScene = null) -> void:
+	if stats:
+		stats.take_damage(amount)
+		
+	modulate = Color(10, 0, 0) 
+	await get_tree().create_timer(0.1).timeout
+	modulate = Color(1, 1, 1)
