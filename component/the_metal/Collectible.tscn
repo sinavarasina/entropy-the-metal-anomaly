@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1ctra5gx0yqc"]
+
+[ext_resource type="Script" uid="uid://cxklsdqnrtlan" path="res://component/the_metal/collectible.gd" id="1_yr6oq"]
+[ext_resource type="Texture2D" uid="uid://drmwnrrqhhtqc" path="res://assets/sprites/3 Cyborg/With Laserbeam/bullet/10_2.png" id="2_x8ici"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eu3nm"]
+radius = 16.0312
+
+[node name="Collectible" type="Area2D"]
+collision_layer = 256
+script = ExtResource("1_yr6oq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.625001, -0.375)
+scale = Vector2(4.55, 4.55)
+texture = ExtResource("2_x8ici")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_eu3nm")
