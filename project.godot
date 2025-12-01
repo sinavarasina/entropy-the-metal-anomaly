@@ -17,10 +17,16 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+<<<<<<< HEAD
 SceneManager="*res://autoload/scene_manager.gd"
 AudioManager="*res://autoload/audio_manager.gd"
 entropy_system="*res://autoload/entropy.gd"
 GameState="*res://autoload/game_state.gd"
+=======
+entropy_system="*res://autoload/entropy.gd"
+scene_manager="*res://autoload/scene_manager.gd"
+AudioManager="*res://autoload/Audio_manager/AudioManager.tscn"
+>>>>>>> add_sfx
 
 [global_group]
 

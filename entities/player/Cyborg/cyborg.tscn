@@ -33,9 +33,9 @@
 [ext_resource type="Texture2D" uid="uid://p4fs8mvqtw6e" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam5.png" id="19_wlryj"]
 [ext_resource type="Texture2D" uid="uid://cic7bufegr20t" path="res://assets/sprites/3 Cyborg/With Laserbeam/fix/firing/firingHorLaserbeam6.png" id="20_u8jbd"]
 [ext_resource type="Script" uid="uid://bjlu3cai223gh" path="res://entities/player/Cyborg/controller.gd" id="25_ri8mo"]
-[ext_resource type="AudioStream" uid="uid://dydrq7dh1jo6t" path="res://assets/SoundEffect/step_metal.ogg" id="32_mh2pd"]
+[ext_resource type="AudioStream" uid="uid://dydrq7dh1jo6t" path="res://assets/SoundEffect/step/step_metal.ogg" id="32_mh2pd"]
 [ext_resource type="AudioStream" uid="uid://cgccawevnahly" path="res://assets/SoundEffect/Shoot/Shoot 8.mp3" id="32_wxb62"]
-[ext_resource type="AudioStream" uid="uid://6w01qrrs80dc" path="res://assets/SoundEffect/Jumping/Jump.wav" id="34_ocbnj"]
+[ext_resource type="AudioStream" uid="uid://6w01qrrs80dc" path="res://assets/SoundEffect/Jumping/Jump.mp3" id="34_ocbnj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyaby"]
 size = Vector2(30, 49)
