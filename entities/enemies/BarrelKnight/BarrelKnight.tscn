@@ -299,8 +299,6 @@ texture_filter = 1
 position = Vector2(52, -18)
 scale = Vector2(1.61989, 1.67455)
 sprite_frames = SubResource("SpriteFrames_1khy2")
-animation = &"Attack"
-frame_progress = 0.247823
 animation = &"Run"
 frame_progress = 0.331018
 

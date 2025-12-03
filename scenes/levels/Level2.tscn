@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://dd7r7uvs4sji1"]
+[gd_scene load_steps=18 format=4 uid="uid://dnghtystj6o2d"]
 
 [ext_resource type="PackedScene" uid="uid://dra0cogy3bnme" path="res://entities/player/Cyborg/cyborg.tscn" id="1_dpm1s"]
 [ext_resource type="Texture2D" uid="uid://63le268fqwrt" path="res://assets/map/background/parallax_background_layer_1.png" id="2_mcssb"]
