@@ -10,7 +10,12 @@ func setup(controller: EnemyAI) -> void:
 
 func enter() -> void:
 	anim.play("Attack")
-	
+	if ai.entity.id == 1:
+		AudioManager.play_sfx("droid_shoot")
+	elif ai.entity.id == 2:
+		AudioManager.play_sfx("slash")
+	elif ai.entity.id == 99:
+		AudioManager.play_sfx("")
 	if anim.sprite_frames.has_animation("Attack"):
 		anim.sprite_frames.set_animation_loop("Attack", false)
 	

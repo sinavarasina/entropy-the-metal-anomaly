@@ -191,13 +191,14 @@ bg_color = Color(1, 0, 0, 1)
 script = ExtResource("1_xxdin")
 is_boss = true
 entropy_reward = 50.0
+id = 99
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Marker2D"]
 sprite_frames = SubResource("SpriteFrames_reboo")
 animation = &"Attack"
-frame_progress = 0.100549445
+frame_progress = 0.100549
 
 [node name="VisionArea" type="Area2D" parent="Marker2D"]
 script = ExtResource("35_hxb0b")

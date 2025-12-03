@@ -267,6 +267,7 @@ bg_color = Color(1, 0, 0, 1)
 
 [node name="DroidZapper" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_1dxl3")
+id = 1
 
 [node name="Marker2D" type="Marker2D" parent="."]
 

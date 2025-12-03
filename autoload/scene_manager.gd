@@ -122,6 +122,5 @@ func toggle_pause() -> void:
 
 func show_game_over() -> void:
 	await get_tree().create_timer(1.0).timeout
-	
 	load_menu(GAME_OVER_PATH)
 	get_tree().paused = true #

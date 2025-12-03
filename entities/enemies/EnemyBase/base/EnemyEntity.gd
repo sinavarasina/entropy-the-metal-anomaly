@@ -4,6 +4,7 @@ class_name EnemyEntity
 @export_group("Enemy Identity")
 @export var is_boss: bool = false 
 @export var entropy_reward: float = 1.0   
+@export var id: int = 0
 
 @export_group("Visuals")
 @export var floating_text_scene: PackedScene = preload("res://scenes/ui/FloatingText/FloatingText.tscn")
@@ -35,3 +36,4 @@ func _spawn_damage_text(amount: float, is_crit: bool) -> void:
 func apply_entropy(multiplier: float) -> void:
 	if stats: stats.apply_entropy(multiplier)
 	if mover: mover.apply_entropy(multiplier)
+	

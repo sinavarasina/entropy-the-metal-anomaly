@@ -24,7 +24,7 @@ func on_enemy_killed(is_boss: bool) -> void:
 
 	print("BOSS DEFEATED! LEVEL COMPLETE!")
 	
-	#AudioManager.play_bgm("victory", 0.5)
+	AudioManager.play_bgm("victory")
 	
 	level_completed.emit()
 	

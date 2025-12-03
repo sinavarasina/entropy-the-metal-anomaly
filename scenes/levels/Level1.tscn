@@ -67,8 +67,8 @@ scale = Vector2(1.80427, 1.33365)
 
 [node name="door3" parent="." instance=ExtResource("6_76cw8")]
 position = Vector2(1806, -1286)
-rotation = 1.5707964
-scale = Vector2(1.5017381, 1.5017381)
+rotation = 1.5708
+scale = Vector2(1.50174, 1.50174)
 is_boss_gate = true
 required_score = 50
 

@@ -291,6 +291,7 @@ bg_color = Color(1, 0, 0, 1)
 
 [node name="BarrelKnight" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_qih3o")
+id = 2
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
