@@ -1,8 +1,7 @@
-[gd_scene load_steps=24 format=4 uid="uid://dd7r7uvs4sji1"]
+[gd_scene load_steps=24 format=4 uid="uid://dnghtystj6o2d"]
 
 [ext_resource type="Script" uid="uid://b4d61rdrojei6" path="res://scenes/levels/level_2.gd" id="1_6rin4"]
 [ext_resource type="PackedScene" uid="uid://dra0cogy3bnme" path="res://entities/player/Cyborg/cyborg.tscn" id="1_dpm1s"]
-[ext_resource type="Script" uid="uid://b4d61rdrojei6" path="res://scenes/levels/level_2.gd" id="1_mcssb"]
 [ext_resource type="Texture2D" uid="uid://63le268fqwrt" path="res://assets/map/background/parallax_background_layer_1.png" id="2_mcssb"]
 [ext_resource type="Texture2D" uid="uid://c0a3l5rqlynm1" path="res://assets/map/background/parallax_background_layer_2.png" id="3_dwyyt"]
 [ext_resource type="Texture2D" uid="uid://smrhbcu7i17g" path="res://assets/map/background/parallax_background_layer_3.png" id="4_a6cvn"]
