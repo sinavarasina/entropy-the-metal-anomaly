@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwo1nka4q2pks"]
+[gd_scene load_steps=3 format=3 uid="uid://cwo1nka4q2pks"]
 
 [ext_resource type="Script" uid="uid://377po2tylgdp" path="res://scenes/ui/menus/MainMenu/main_menu.gd" id="1_vjtqc"]
+[ext_resource type="Script" uid="uid://c3v6ihn0ngusp" path="res://component/ui/sfx/UiSoundComponent.gd" id="2_chcjj"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -23,10 +24,19 @@ alignment = 1
 layout_mode = 2
 text = "Start"
 
+[node name="BtnSound" type="Node" parent="VBoxContainer/BtnStart"]
+script = ExtResource("2_chcjj")
+
 [node name="BtnSettings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Settings"
 
+[node name="BtnSound" type="Node" parent="VBoxContainer/BtnSettings"]
+script = ExtResource("2_chcjj")
+
 [node name="BtnQuit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit"
+
+[node name="BtnSound" type="Node" parent="VBoxContainer/BtnQuit"]
+script = ExtResource("2_chcjj")

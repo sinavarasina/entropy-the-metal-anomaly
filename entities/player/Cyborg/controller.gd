@@ -78,10 +78,9 @@ func _state_run(delta: float):
 	)
 	cyborg.move_and_slide()
 
-	if cyborg.is_on_wall() and cyborg.step.playing:
-		cyborg.step.stop()
-	elif not cyborg.is_on_wall() and not cyborg.step.playing and cyborg.is_on_floor():
-		cyborg.step.play()
+	var dir_x = cyborg.input.get_direction().x
+
+
 
 	if cyborg.input.is_jump_pressed():
 		_perform_jump()
@@ -153,18 +152,18 @@ func fire_bullet():
 func _perform_jump():
 	cyborg.movement.jump(cyborg.stats.jump_force)
 	cyborg.anim.play_jump()
-	cyborg.jump.play()
+	AudioManager.play_sfx("jump")
 
 func _perform_double_jump():
 	cyborg.movement.jump(cyborg.stats.double_jump_force)
 	cyborg.anim.play_double_jump()
 	can_double_jump = false
-	cyborg.jump.play()
+	AudioManager.play_sfx("double_jump")
 
 func change_state(new_state: State):
 	if state == State.RUN and new_state != State.RUN:
-		if cyborg.step.playing:
-			cyborg.step.stop()
+		if AudioManager.is_sfx_playing("step"):
+			AudioManager.stop_sfx("step")
 			
 	state = new_state
 	
@@ -173,11 +172,11 @@ func change_state(new_state: State):
 			cyborg.anim.play_idle()
 		State.RUN: 
 			cyborg.anim.play_run()
-			if not cyborg.step.playing:
-				cyborg.step.play()
+			if not AudioManager.is_sfx_playing("step"):
+				AudioManager.play_sfx("step")
 		State.ATTACK: 
 			cyborg.anim.play_attack()
-			cyborg.shoot.play()
+			AudioManager.play_sfx("shoot")
 			fire_bullet()
 		State.AIR: 
 			pass

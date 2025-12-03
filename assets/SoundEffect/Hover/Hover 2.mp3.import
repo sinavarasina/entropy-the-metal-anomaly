@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6ujyj8amia10"
+path="res://.godot/imported/Hover 2.mp3-867e08f2af152d17a3e82cce343829ba.mp3str"
+
+[deps]
+
+source_file="res://assets/SoundEffect/Hover/Hover 2.mp3"
+dest_files=["res://.godot/imported/Hover 2.mp3-867e08f2af152d17a3e82cce343829ba.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8fw1fagkmi4"]
+[gd_scene load_steps=3 format=3 uid="uid://b8fw1fagkmi4"]
 
 [ext_resource type="Script" uid="uid://77vdsu5usfvy" path="res://scenes/ui/menus/SettingsMenu/settings_menu.gd" id="1_m5rsh"]
+[ext_resource type="Script" uid="uid://c3v6ihn0ngusp" path="res://component/ui/sfx/UiSoundComponent.gd" id="2_pr6kv"]
 
 [node name="SettingsMenu" type="Control"]
 layout_mode = 3
@@ -27,3 +28,6 @@ offset_top = 11.0
 offset_right = 1123.0
 offset_bottom = 57.0
 text = "Back"
+
+[node name="BtnSound" type="Node" parent="BtnBack"]
+script = ExtResource("2_pr6kv")
