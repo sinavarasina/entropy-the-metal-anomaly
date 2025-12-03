@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1rn32605au01"]
+[gd_scene load_steps=6 format=3 uid="uid://b1rn32605au01"]
 
 [ext_resource type="Script" uid="uid://bui734mtqomrm" path="res://scenes/ui/PlayerHUD/player_hud.gd" id="1_xcqoh"]
+[ext_resource type="FontFile" uid="uid://cbhvhpjn0da6c" path="res://assets/UI/Font/CyberpunkCraftpixPixel.otf" id="2_8u2fs"]
+[ext_resource type="Texture2D" uid="uid://drmwnrrqhhtqc" path="res://assets/sprites/3 Cyborg/With Laserbeam/bullet/10_2.png" id="3_n8ius"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2sgun"]
 bg_color = Color(0.21142459, 0.22448194, 0.24333164, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcqoh"]
-bg_color = Color(0.6, 0, 0, 1)
+bg_color = Color(0, 1, 0, 1)
 
 [node name="PlayerHud" type="Control"]
 layout_mode = 3
@@ -20,17 +22,35 @@ script = ExtResource("1_xcqoh")
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 1.0
-offset_right = 713.0
-offset_bottom = 14.0
+offset_left = 118.0
+offset_top = 99.0
+offset_right = 678.0
+offset_bottom = 146.0
 theme_override_styles/background = SubResource("StyleBoxFlat_2sgun")
 theme_override_styles/fill = SubResource("StyleBoxFlat_xcqoh")
 show_percentage = false
 
+[node name="HPLabel" type="Label" parent="HealthBar"]
+layout_mode = 0
+offset_left = -70.0
+offset_top = 2.0
+offset_right = -12.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("2_8u2fs")
+theme_override_font_sizes/font_size = 40
+text = "HP"
+
 [node name="ScoreLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 621.0
-offset_right = 45.0
-offset_bottom = 644.0
+offset_left = 213.0
+offset_top = 47.0
+offset_right = 253.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource("2_8u2fs")
+theme_override_font_sizes/font_size = 40
+
+[node name="Sprite2D" type="Sprite2D" parent="ScoreLabel"]
+texture_filter = 1
+position = Vector2(-57, 20)
+scale = Vector2(9.399999, 9.075861)
+texture = ExtResource("3_n8ius")

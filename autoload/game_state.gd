@@ -19,6 +19,8 @@ func on_enemy_killed(is_boss: bool) -> void:
 	if not is_boss:
 		add_score(50) 
 		return
+	else:
+		add_score(200)
 
 	print("BOSS DEFEATED! LEVEL COMPLETE!")
 	

@@ -197,7 +197,7 @@ entropy_reward = 50.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Marker2D"]
 sprite_frames = SubResource("SpriteFrames_reboo")
 animation = &"Attack"
-frame_progress = 0.10054944444412336
+frame_progress = 0.100549445
 
 [node name="VisionArea" type="Area2D" parent="Marker2D"]
 script = ExtResource("35_hxb0b")
@@ -218,6 +218,7 @@ shape = SubResource("RectangleShape2D_ny821")
 
 [node name="Stats" type="Node" parent="."]
 script = ExtResource("35_awrqd")
+max_hp = 6000.0
 attack_damage = 200.0
 
 [node name="Mover" type="Node" parent="."]

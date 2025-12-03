@@ -279,6 +279,7 @@ animation = &"DamagedNDeath"
 frame_progress = 0.366466
 
 [node name="VisionArea" type="Area2D" parent="Marker2D"]
+visible = false
 script = ExtResource("6_r6g1k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/VisionArea"]
@@ -292,6 +293,7 @@ position = Vector2(40.25, -16.125)
 shape = SubResource("RectangleShape2D_buao6")
 
 [node name="CollisionStandard" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -13.5)
 shape = SubResource("RectangleShape2D_eee4d")
 

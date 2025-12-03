@@ -22,4 +22,4 @@ func _update_health(current: float, max_val: float) -> void:
 	health_bar.value = current
 
 func _update_score(new_score: int) -> void:
-	score_label.text = "Metal: " + str(new_score)
+	score_label.text = str(new_score)

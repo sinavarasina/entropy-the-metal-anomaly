@@ -35,7 +35,7 @@
 [ext_resource type="Script" uid="uid://bjlu3cai223gh" path="res://entities/player/Cyborg/controller.gd" id="25_ri8mo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyaby"]
-size = Vector2(30, 49)
+size = Vector2(19, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eom1p"]
 atlas = ExtResource("2_xyaby")
@@ -586,17 +586,17 @@ slide_on_ceiling = false
 script = ExtResource("1_h6dt7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6.5)
+position = Vector2(2.5, 6.5)
 shape = SubResource("RectangleShape2D_xyaby")
 
 [node name="Pivot" type="Marker2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pivot"]
 texture_filter = 1
-position = Vector2(-18, -30)
+position = Vector2(-17, -29)
 scale = Vector2(1.33236, 1.25)
 sprite_frames = SubResource("SpriteFrames_ut818")
-animation = &"Hurt"
+animation = &"Idle2Laserbeam"
 centered = false
 
 [node name="Muzzle" type="Marker2D" parent="Pivot"]

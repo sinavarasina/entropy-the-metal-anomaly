@@ -27,7 +27,7 @@ func _ready() -> void:
 		
 		load_menu(MAIN_MENU_PATH)
 	else:
-		printerr("SceneManager Error: Node 'Main' tidak ditemukan di Root!")
+		printerr("SceneManager Error: Node 'Main' not found in root!")
 
 # ==============================================================================
 # LEVEL MANAGEMENT
@@ -39,7 +39,6 @@ func load_level(level_path: String) -> void:
 	
 	current_level_path = level_path
 	
-	# 3. Load Level Baru
 	var level_res = load(level_path)
 	if level_res:
 		current_level = level_res.instantiate()
@@ -51,13 +50,13 @@ func load_level(level_path: String) -> void:
 		is_game_paused = false
 		
 	else:
-		printerr("SceneManager: Gagal memuat level di path -> ", level_path)
+		printerr("SceneManager: Failed to load Level at -> ", level_path)
 
 func reload_level() -> void:
 	if current_level_path != "":
 		load_level(current_level_path)
 	else:
-		printerr("SceneManager: Tidak ada level yang disimpan untuk di-restart.")
+		printerr("SceneManager: No Level saved to restart.")
 
 func unload_level() -> void:
 	if current_level:
@@ -77,7 +76,7 @@ func load_menu(menu_path: String) -> void:
 		current_menu = menu_res.instantiate()
 		ui_root.add_child(current_menu)
 	else:
-		printerr("SceneManager: Gagal memuat menu di path -> ", menu_path)
+		printerr("SceneManager: Failed to load menu at -> ", menu_path)
 
 func unload_menu() -> void:
 	if current_menu:
@@ -96,7 +95,7 @@ func load_hud() -> void:
 			hud.name = "PlayerHUD" 
 			ui_root.add_child(hud)
 		else:
-			printerr("SceneManager: HUD scene tidak ditemukan di path -> ", HUD_PATH)
+			printerr("SceneManager: HUD scene not found at -> ", HUD_PATH)
 
 func unload_hud() -> void:
 	if ui_root.has_node("PlayerHUD"):

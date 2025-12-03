@@ -16,10 +16,10 @@ script = ExtResource("1_7d7pp")
 position = Vector2(7, 4)
 
 [node name="DroidZapper4" parent="." instance=ExtResource("2_x4si1")]
-position = Vector2(397, 244)
+position = Vector2(500, 242)
 
 [node name="DroidZapper" parent="." instance=ExtResource("2_x4si1")]
-position = Vector2(701, 243)
+position = Vector2(1790, 77)
 
 [node name="Cyborg" parent="." instance=ExtResource("2_j08sa")]
 position = Vector2(661, 393)
@@ -31,7 +31,7 @@ limit_top = -9999999
 position_smoothing_enabled = true
 
 [node name="DroidZapper2" parent="." instance=ExtResource("2_x4si1")]
-position = Vector2(466, 468)
+position = Vector2(1024, 150)
 
 [node name="DroidZapper3" parent="." instance=ExtResource("2_x4si1")]
 position = Vector2(262, 467)
@@ -40,7 +40,7 @@ position = Vector2(262, 467)
 position = Vector2(1264, 39)
 
 [node name="BarrelKnight2" parent="." instance=ExtResource("5_68ib6")]
-position = Vector2(1326, 203)
+position = Vector2(1117, 149)
 
 [node name="DroidZapper5" parent="." instance=ExtResource("2_x4si1")]
 position = Vector2(1483, -331)
@@ -49,7 +49,7 @@ position = Vector2(1483, -331)
 position = Vector2(1941, -292)
 
 [node name="DroidZapper6" parent="." instance=ExtResource("2_x4si1")]
-position = Vector2(2347, -652)
+position = Vector2(2253, -650)
 
 [node name="DroidZapper7" parent="." instance=ExtResource("2_x4si1")]
 position = Vector2(1589, -544)
@@ -67,10 +67,55 @@ scale = Vector2(1.80427, 1.33365)
 
 [node name="door3" parent="." instance=ExtResource("6_76cw8")]
 position = Vector2(1806, -1286)
-rotation = 1.5707963267948966
-scale = Vector2(1.5017380420210509, 1.5017380420210509)
+rotation = 1.5707964
+scale = Vector2(1.5017381, 1.5017381)
 is_boss_gate = true
 required_score = 50
 
 [node name="BossLevel1" parent="." instance=ExtResource("8_brv20")]
 position = Vector2(1010, -1344)
+
+[node name="Collectible" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(558, 229)
+
+[node name="Collectible2" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(89, 426)
+
+[node name="Collectible3" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1400, 68)
+
+[node name="Collectible4" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(2053, -8)
+
+[node name="Collectible5" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(2404, -309)
+
+[node name="Collectible6" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1892, -438)
+
+[node name="Collectible7" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(2209, -665)
+
+[node name="Collectible8" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1273, -646)
+
+[node name="Collectible9" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1415, -898)
+
+[node name="Collectible10" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(2039, -954)
+
+[node name="Collectible11" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(2430, -976)
+
+[node name="Collectible12" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1978, -684)
+
+[node name="Collectible13" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1661, -78)
+
+[node name="Collectible14" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1516, -196)
+
+[node name="Collectible15" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1884, 247)
