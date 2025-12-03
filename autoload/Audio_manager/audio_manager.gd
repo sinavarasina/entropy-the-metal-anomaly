@@ -13,18 +13,21 @@ var current_sfx_name: String = ""
 # Kamus (Dictionary) untuk memetakan nama SFX ke jalur file (path)
 # Anda bisa menambahkan atau memuat kamus ini dari file JSON/Resource lain.
 const SFX_PATHS = {
-	"jump": ["res://assets/SoundEffect/Jumping/Jump.mp3", -5.0],
-	"double_jump": ["res://assets/SoundEffect/Jumping/Jump.mp3", -6.0],
+	"jump": ["res://assets/SoundEffect/Jumping/Jump.mp3", -10.0],
+	"double_jump": ["res://assets/SoundEffect/Jumping/Jump.mp3", -10.0],
 	"shoot": ["res://assets/SoundEffect/Shoot/Shoot 8.mp3", -3.0],
 	"step": ["res://assets/SoundEffect/step/step_metal.ogg", 1.0],
 	"hover":["res://assets/SoundEffect/Hover/Hover 4.mp3",1.0],
 	"click":["res://assets/SoundEffect/Click/Click 1.mp3",1.0],
+	"slash":["res://assets/SoundEffect/Slash/sword-slash-01-266296.mp3",-6.0],
+	"death":["res://assets/SoundEffect/death/male-death-sound-128357.mp3",-10.0],
+	"hurt":["res://assets/SoundEffect/hurt/male-hurt-sound-95206.mp3",-10.0],
 }
 
 # Kamus untuk memetakan nama BGM ke jalur file dan volume default
 const BGM_PATHS = {
-	"main_menu": ["res://assets/Music/MainMenu.mp3", -8.0],
-	"level_1": ["res://assets/Music/Level1.mp3", -10.0],
+	"main_menu": ["res://assets/BGM/main_menu/main_menu 2.mp3", 1.0],
+	"level_1": ["res://assets/BGM/BGM 7.mp3", 1.0],
 	"boss_battle": ["res://assets/Music/BossBattle.mp3", -5.0],
 	"victory": ["res://assets/Music/Victory.mp3", -12.0],
 }

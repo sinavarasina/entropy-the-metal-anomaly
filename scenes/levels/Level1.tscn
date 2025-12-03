@@ -1,11 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmubpk75m2jxd"]
+[gd_scene load_steps=7 format=3 uid="uid://cmubpk75m2jxd"]
 
 [ext_resource type="PackedScene" uid="uid://cp1h3asd6cidt" path="res://scenes/map/station.tscn" id="1_j08sa"]
 [ext_resource type="PackedScene" uid="uid://dra0cogy3bnme" path="res://entities/player/Cyborg/cyborg.tscn" id="2_j08sa"]
 [ext_resource type="PackedScene" uid="uid://dfnigy5vwrfp6" path="res://entities/enemies/DroidZapper/DroidZapper.tscn" id="2_x4si1"]
+[ext_resource type="AudioStream" uid="uid://c0g02fqmwdw0k" path="res://assets/BGM/Level_1/3-strike-battle-game-bgm-261231.mp3" id="4_76cw8"]
 [ext_resource type="PackedScene" uid="uid://dvw2yxt3dne22" path="res://entities/enemies/BarrelKnight/BarrelKnight.tscn" id="5_68ib6"]
-[ext_resource type="AudioStream" uid="uid://cdcp44ekxommo" path="res://assets/BGM/1128.ogg" id="5_76cw8"]
-[ext_resource type="PackedScene" uid="uid://b1ctra5gx0yqc" path="res://component/the_metal/collectible.tscn" id="7_m00rq"]
+[ext_resource type="PackedScene" uid="uid://b1ctra5gx0yqc" path="res://component/the_metal/Collectible.tscn" id="7_m00rq"]
 
 [node name="Level1" type="Node2D"]
 
@@ -28,7 +28,7 @@ limit_top = -9999999
 position_smoothing_enabled = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cyborg"]
-stream = ExtResource("5_76cw8")
+stream = ExtResource("4_76cw8")
 autoplay = true
 
 [node name="DroidZapper2" parent="." instance=ExtResource("2_x4si1")]

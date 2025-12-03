@@ -34,6 +34,7 @@ func update(delta: float):
 func trigger_hurt():
 	if state != State.DEAD:
 		change_state(State.HURT)
+		AudioManager.play_sfx("hurt")
 		
 func _state_hurt(delta: float):
 	cyborg.movement.apply_gravity(delta)
@@ -46,6 +47,7 @@ func _state_hurt(delta: float):
 func _on_player_died():
 	if state != State.DEAD:
 		change_state(State.DEAD)
+		AudioManager.play_sfx("death")
 		print("Player dead!")
 		
 func _state_dead(delta: float):
