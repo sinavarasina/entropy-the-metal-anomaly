@@ -16,6 +16,8 @@ class_name EnemyEntity
 func _ready() -> void:
 	add_to_group("enemies")
 	var current_mult = EntropySystem.multiplier
+	if id == 99 :
+		AudioManager.play_bgm("boss_level_1")
 	apply_entropy(current_mult)
 
 func apply_damage(amount: float, source_pos: Vector2 = Vector2.ZERO, is_crit: bool = false, is_kb: bool = false) -> void:

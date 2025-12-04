@@ -2,6 +2,7 @@ extends Control
 
 func _ready() -> void:
 	# Hubungkan tombol
+	AudioManager.play_bgm("game_over")
 	$VBoxContainer/BtnRestart.pressed.connect(_on_restart_pressed)
 	$VBoxContainer/BtnQuit.pressed.connect(_on_quit_pressed)
 	
