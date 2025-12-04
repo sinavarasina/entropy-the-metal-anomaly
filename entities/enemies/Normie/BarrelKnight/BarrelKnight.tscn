@@ -347,7 +347,7 @@ script = ExtResource("25_fr3pm")
 
 [node name="Stats" type="Node" parent="."]
 script = ExtResource("25_qih3o")
-max_hp = 1.0
+max_hp = 250.0
 attack_damage = 60.0
 defense = 40.0
 

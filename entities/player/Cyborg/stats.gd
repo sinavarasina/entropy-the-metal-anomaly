@@ -5,7 +5,7 @@ signal health_changed(current_hp: float, max_hp: float)
 signal player_died
 
 # ===== Combat Stats =====
-@export var max_hp: float = 10000
+@export var max_hp: float = 750
 @export var attack_damage: float = 100
 @export var luck: float = 10.0
 @export var base_crit_rate: float = 0.1 
