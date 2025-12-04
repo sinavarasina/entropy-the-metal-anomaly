@@ -22,10 +22,11 @@ script = ExtResource("1_xcqoh")
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 layout_mode = 0
-offset_left = 118.0
-offset_top = 99.0
-offset_right = 678.0
-offset_bottom = 146.0
+offset_left = 74.0
+offset_top = 46.00000000000001
+offset_right = 634.0
+offset_bottom = 93.0
+scale = Vector2(0.6, 0.6)
 theme_override_styles/background = SubResource("StyleBoxFlat_2sgun")
 theme_override_styles/fill = SubResource("StyleBoxFlat_xcqoh")
 show_percentage = false
@@ -42,10 +43,11 @@ text = "HP"
 
 [node name="ScoreLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 213.0
-offset_top = 47.0
-offset_right = 253.0
-offset_bottom = 90.0
+offset_left = 125.0
+offset_top = 15.000000000000007
+offset_right = 165.0
+offset_bottom = 58.00000000000001
+scale = Vector2(0.6, 0.6)
 theme_override_fonts/font = ExtResource("2_8u2fs")
 theme_override_font_sizes/font_size = 40
 
