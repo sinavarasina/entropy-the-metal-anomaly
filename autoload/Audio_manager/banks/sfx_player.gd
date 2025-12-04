@@ -10,5 +10,6 @@ static var data = {
 	"death":["res://assets/SoundEffect/death/male-death-sound-128357.mp3",1.0],
 	"hurt":["res://assets/SoundEffect/hurt/male-hurt-sound-95206.mp3",1.0],
 	"slash":["res://assets/SoundEffect/Slash/sword-slash-01-266296.mp3",-5.0],
-	"droid_shoot":["res://assets/SoundEffect/Shoot/Shoot 4.mp3",-5.0]
+	"droid_shoot":["res://assets/SoundEffect/Shoot/Shoot 4.mp3",-5.0],
+	"boss_slash":["res://assets/SoundEffect/boss/electric-shock-334777.mp3",-5.0],
 }

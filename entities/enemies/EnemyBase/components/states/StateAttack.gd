@@ -15,7 +15,7 @@ func enter() -> void:
 	elif ai.entity.id == 2:
 		AudioManager.play_sfx("slash")
 	elif ai.entity.id == 99:
-		AudioManager.play_sfx("")
+		AudioManager.play_sfx("boss_slash")
 	if anim.sprite_frames.has_animation("Attack"):
 		anim.sprite_frames.set_animation_loop("Attack", false)
 	
