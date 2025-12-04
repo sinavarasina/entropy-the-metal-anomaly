@@ -300,7 +300,7 @@ shape = SubResource("RectangleShape2D_eee4d")
 
 [node name="Stats" type="Node" parent="."]
 script = ExtResource("7_eee4d")
-max_hp = 500.0
+max_hp = 1.0
 attack_damage = 120.0
 defense = 20.0
 
