@@ -2089,3 +2089,5 @@ position = Vector2(15300, 179)
 [node name="door" parent="." instance=ExtResource("16_mctl7")]
 position = Vector2(14450, 185)
 scale = Vector2(0.801913, 0.833056)
+is_boss_gate = true
+required_score = 400

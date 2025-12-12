@@ -604,6 +604,7 @@ position = Vector2(30, 2)
 
 [node name="Stats" type="Node" parent="."]
 script = ExtResource("9_lelfy")
+max_hp = 500.0
 
 [node name="Movement" type="Node" parent="."]
 script = ExtResource("10_movement")

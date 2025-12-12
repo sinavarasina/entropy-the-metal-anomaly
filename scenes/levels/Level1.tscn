@@ -26,7 +26,7 @@ position = Vector2(661, 393)
 
 [node name="Camera2D2" type="Camera2D" parent="Cyborg"]
 position = Vector2(44, 2)
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 limit_top = -9999999
 position_smoothing_enabled = true
 
@@ -66,7 +66,7 @@ position = Vector2(2168, -987)
 scale = Vector2(1.80427, 1.33365)
 
 [node name="door3" parent="." instance=ExtResource("6_76cw8")]
-position = Vector2(1806, -1286)
+position = Vector2(1806, -1283)
 rotation = 1.5708
 scale = Vector2(1.50174, 1.50174)
 is_boss_gate = true
