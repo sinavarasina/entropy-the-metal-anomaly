@@ -487,7 +487,7 @@ tile_set = SubResource("TileSet_tidao")
 
 [node name="W" type="Sprite2D" parent="ControlTutorial"]
 texture_filter = 1
-position = Vector2(408, 330)
+position = Vector2(628, 332)
 texture = ExtResource("2_6i361")
 
 [node name="Label" type="Label" parent="ControlTutorial/W"]
@@ -501,7 +501,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="A" type="Sprite2D" parent="ControlTutorial"]
 texture_filter = 1
-position = Vector2(374, 363)
+position = Vector2(594, 365)
 texture = ExtResource("3_hnssf")
 
 [node name="Label" type="Label" parent="ControlTutorial/A"]
@@ -514,7 +514,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="D" type="Sprite2D" parent="ControlTutorial"]
 texture_filter = 1
-position = Vector2(443, 363)
+position = Vector2(663, 365)
 texture = ExtResource("4_l4xe3")
 
 [node name="Label" type="Label" parent="ControlTutorial/D"]
@@ -528,7 +528,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="U" type="Sprite2D" parent="ControlTutorial"]
 texture_filter = 1
-position = Vector2(269, 363)
+position = Vector2(489, 365)
 texture = ExtResource("5_gi128")
 
 [node name="Label" type="Label" parent="ControlTutorial/U"]

@@ -12,7 +12,7 @@ extends Node2D
 @onready var info_label: Label = $Label
 
 var player_near: bool = false
-const OPEN_DELAY := 1.0
+const OPEN_DELAY := 0.3
 var tween_text: Tween
 
 func _ready() -> void:
