@@ -22,7 +22,7 @@ position = Vector2(500, 242)
 position = Vector2(1790, 77)
 
 [node name="Cyborg" parent="." instance=ExtResource("2_j08sa")]
-position = Vector2(1952, -188)
+position = Vector2(630, 388)
 
 [node name="Camera2D2" type="Camera2D" parent="Cyborg"]
 position = Vector2(44, 2)

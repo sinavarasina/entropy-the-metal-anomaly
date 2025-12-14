@@ -1757,7 +1757,7 @@ position = Vector2(63, 193)
 
 [node name="Camera2D2" type="Camera2D" parent="Cyborg"]
 position = Vector2(44, 2)
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 limit_top = -9999999
 position_smoothing_enabled = true
 
@@ -1814,7 +1814,7 @@ repeat_size = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
 texture_repeat = 2
-position = Vector2(-490, 0)
+position = Vector2(-486, 0)
 texture = ExtResource("6_5v643")
 centered = false
 region_enabled = true
